@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import LocList from '../../datas/LocationList'
 
 const Body = styled.div`
 display: flex;
@@ -63,7 +64,7 @@ const Card = styled.div `
 `
 const CardTitle = styled.div `
 color: white;
-width: 80px;
+width: 80%;
 font-size: 18px;
 `
 
@@ -74,13 +75,18 @@ function BannerHome() {
           <Banner>Chez vous, partout et ailleurs</Banner>
         </DivBanner>
 
+        {/* <CardsContainer> */}
         <CardsContainer>
+          {LocList.map((loc) => (
+             <Card key={loc}><CardTitle>{loc.title}</CardTitle></Card>
+          ))}
+
+          {/* <Card><CardTitle>Titre de la location</CardTitle></Card>
           <Card><CardTitle>Titre de la location</CardTitle></Card>
           <Card><CardTitle>Titre de la location</CardTitle></Card>
           <Card><CardTitle>Titre de la location</CardTitle></Card>
           <Card><CardTitle>Titre de la location</CardTitle></Card>
-          <Card><CardTitle>Titre de la location</CardTitle></Card>
-          <Card><CardTitle>Titre de la location</CardTitle></Card>
+          <Card><CardTitle>Titre de la location</CardTitle></Card> */}
         </CardsContainer>
       </Body>
     )

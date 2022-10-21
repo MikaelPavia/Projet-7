@@ -10,6 +10,14 @@ height: 200px;
 background-color: black;
 margin-top: 100px;
 `
+const FooterLogo = styled.div`
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 50px;
+`
+
 const DivFooter = styled.div`
 color: white;
 display: flex;
@@ -21,7 +29,7 @@ font-size: 18px;
 function Footer() {
     return (
       <FooterStyle>
-        <DivFooter>LOGO</DivFooter>
+        <FooterLogo>Kasa</FooterLogo>
         <DivFooter>2020 Kaza, All rights reserved</DivFooter>
       </FooterStyle>
     )

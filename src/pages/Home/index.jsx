@@ -1,6 +1,8 @@
 import styled from "styled-components"
 import LocList from '../../datas/LocationList'
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
+// import Cards from "../../components/Card"
+import BanniereImg from '../../assets/banniere.jpeg'
 
 const Body = styled.div`
 display: flex;
@@ -14,10 +16,15 @@ margin-top: 100px;
 display: flex;
 justify-content: center;
 align-items: center;
-background-image:;
+background-image: url(${BanniereImg});
+background-size: contain;
 background-color: #00000030;
+
+z-index: 1;
 border-radius: 15px;
 `
+
+
 
 const Banner = styled.div `
 height: 50px;
@@ -42,7 +49,7 @@ padding-top: 40px;
 padding-bottom: 40px;
 `
 
-const Card = styled.a `
+const Card = styled(Link) `
   height: 330px;
   width: 360px;
   background: rgb(97,0,0);
@@ -93,16 +100,35 @@ function BannerHome(picture) {
     return (
       <Body>
         <DivBanner>
+          
           <Banner>Chez vous, partout et ailleurs</Banner>
         </DivBanner>
 
         <CardsContainer>
           {LocList.map((loc) => (
 
-             <Card key={loc} href='./pages/Error'>
+            //  <Card key={loc} href='./pages/Error'>
+            //     <CardImg src={loc.cover} alt="Illustration d'une location"></CardImg>
+            //     <CardTitle>{loc.title}</CardTitle>
+            //  </Card>
+
+            
+
+            <Card key={loc.id} to={'./pages/Location/' + loc.id}>
                 <CardImg src={loc.cover} alt="Illustration d'une location"></CardImg>
                 <CardTitle>{loc.title}</CardTitle>
              </Card>
+
+
+
+          // <Cards 
+          // key={loc.id} 
+          // to={'./pages/Location/' + loc.id}
+          // picture={loc.cover}
+          // title={loc.title}>
+          
+          // </Cards>
+
           ))}
 
         </CardsContainer>

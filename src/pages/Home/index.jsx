@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import LocList from '../../datas/LocationList'
-import { Link } from "react-router-dom"
-// import Cards from "../../components/Card"
+import Cards from "../../components/Card"
 import BanniereImg from '../../assets/banniere.jpeg'
 
 const Body = styled.div`
@@ -17,7 +16,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 background-image: url(${BanniereImg});
-background-size: contain;
+background-size: cover;
 background-color: #00000030;
 
 z-index: 1;
@@ -49,54 +48,7 @@ padding-top: 40px;
 padding-bottom: 40px;
 `
 
-const Card = styled(Link) `
-  height: 330px;
-  width: 360px;
-  background: rgb(97,0,0);
-  background: linear-gradient(0deg, rgba(97,0,0,0.5956757703081232) 0%, rgba(239,108,108,1) 20%, rgba(239,108,108,1) 100%);
-  margin: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-  align-items: center;
-  text-decoration: none;
-  &:hover {
-    box-shadow: grey 5px 5px 5px;
-  }
-`
-
-// const Card = styled.div `
-//   height: 330px;
-//   width: 360px;
-//   background-color: #EF6C6C;
-//   margin: 15px;
-//   border-radius: 10px;
-//   display: flex;
-//   // align-items: end;
-//   flex-direction: column;
-//   padding-bottom: 15px;
-//   // padding-left: 15px;
-//   align-items: center;
-// `
-
-const CardImg = styled.img `
-  width: 95%;
-  border-radius: 10px;
-  background-color: ;
-  height: 270px;
-  margin-top: 8px;
-`
-
-const CardTitle = styled.div `
-color: white;
-width: 60%;
-font-size: 18px;
-margin-top: 15px;
-margin-right: 100px;
-`
-
-function BannerHome(picture) {
+function Home() {
     return (
       <Body>
         <DivBanner>
@@ -107,27 +59,14 @@ function BannerHome(picture) {
         <CardsContainer>
           {LocList.map((loc) => (
 
-            //  <Card key={loc} href='./pages/Error'>
-            //     <CardImg src={loc.cover} alt="Illustration d'une location"></CardImg>
-            //     <CardTitle>{loc.title}</CardTitle>
-            //  </Card>
-
-            
-
-            <Card key={loc.id} to={'./pages/Location/' + loc.id}>
-                <CardImg src={loc.cover} alt="Illustration d'une location"></CardImg>
-                <CardTitle>{loc.title}</CardTitle>
-             </Card>
-
-
-
-          // <Cards 
-          // key={loc.id} 
-          // to={'./pages/Location/' + loc.id}
-          // picture={loc.cover}
-          // title={loc.title}>
+          <Cards 
+          key={loc.id}
+          // LocArray={LocList} 
+          id={loc.id}
+          picture={loc.cover}
+          title={loc.title}>
           
-          // </Cards>
+          </Cards>
 
           ))}
 
@@ -136,8 +75,4 @@ function BannerHome(picture) {
     )
   }
 
-
-
-
-  
-  export default BannerHome
+  export default Home

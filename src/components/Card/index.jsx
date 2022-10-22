@@ -1,9 +1,11 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
+// import { useNavigate } from "react-router-dom"
 
+// const navigate = useNavigate();
 
-const Card = styled(Link) `
+const Card = styled(Link)`
   height: 330px;
   width: 360px;
   background: rgb(97,0,0);
@@ -19,7 +21,6 @@ const Card = styled(Link) `
     box-shadow: grey 5px 5px 5px;
   }
 `
-
 const CardImg = styled.img `
   width: 95%;
   border-radius: 10px;
@@ -36,27 +37,38 @@ margin-top: 15px;
 margin-right: 100px;
 `
 
-function Cards ( {picture, title} ) {
+function Cards ( {LocArray, id ,picture, title} ) {
     return (
-        <Card>
+        <Card to={'./pages/Location/' + id}>
             <CardImg src={picture} alt="Illustration d'une location"></CardImg>
             <CardTitle>{title}</CardTitle>
         </Card>
     )
+
+    // if( ){
+    //   return (
+    //     <Card to={'./pages/Location/' + id}>
+    //         <CardImg src={picture} alt="Illustration d'une location"></CardImg>
+    //         <CardTitle>{title}</CardTitle>
+    //     </Card>
+    // )
+    // }
+    
     
 }
 
-
 Card.propTypes = {
+    id: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     
   }
   
-//   'Card.defaultProps = {
-//     picture: DefaultPicture,
-//     title: '',
+  Card.defaultProps = {
+    id: '',
+    picture: '',
+    title: '',
     
-//   }'
+  }
 
 export default Cards

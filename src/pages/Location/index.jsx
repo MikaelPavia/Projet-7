@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp} />
 
-const Body = styled.body``
+const Body = styled.div``
 
 const Banner = styled.img`
 height: 350px;
@@ -87,7 +87,7 @@ justify-content: center;
 align-items: center;
 border-radius: 10px;
 margin-right: 15px;
-padding-left: 20px;
+padding-left: 30px;
 padding-right: 30px;
 `
 
@@ -174,8 +174,8 @@ function FicheLogement() {
           <Div>
           
             <Tags>
-            {loc.tags.map((tag) => (
-              <Tag>{tag}</Tag>
+            {loc.tags.map((tag, index) => (
+              <Tag key={loc + index}>{tag}</Tag>
             ))}
             </Tags>
             <Ratings></Ratings>

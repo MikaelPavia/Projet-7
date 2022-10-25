@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 // const navigate = useNavigate();
 
-const Card = styled(Link)`
+const CardBlock = styled(Link)`
   height: 330px;
   width: 360px;
   background: rgb(97,0,0);
@@ -39,13 +39,13 @@ margin-right: 100px;
 
 function Cards ( {LocArray, id ,picture, title} ) {
     return (
-        <Card to={'./pages/Location/' + id}>
+        <CardBlock to={'Location/' + id}>
             <CardImg src={picture} alt="Illustration d'une location"></CardImg>
             <CardTitle>{title}</CardTitle>
-        </Card>
+        </CardBlock>
     )
 
-    // if( ){
+    // if(){
     //   return (
     //     <Card to={'./pages/Location/' + id}>
     //         <CardImg src={picture} alt="Illustration d'une location"></CardImg>
@@ -57,14 +57,14 @@ function Cards ( {LocArray, id ,picture, title} ) {
     
 }
 
-Card.propTypes = {
+Cards.propTypes = {
     id: PropTypes.string.isRequired,
     picture: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     
   }
   
-  Card.defaultProps = {
+Cards.defaultProps = {
     id: '',
     picture: '',
     title: '',

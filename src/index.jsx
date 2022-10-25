@@ -26,9 +26,9 @@ root.render(
         
           <Route path="/" element={<Home />} />
 
-          <Route path='/pages/Location/:id' element={<FicheLogement />}/>
+          <Route path='/Location/:id' element={<FicheLogement />}/>
             
-          <Route path='/pages/A_propos' element={<APropos />}/>
+          <Route path='/about' element={<APropos />}/>
             
           <Route path='*' element={<Error />}/>
             

@@ -52,7 +52,7 @@ function Header() {
           
           <Nav>
             <StyledLink to='/'>Accueil</StyledLink>
-            <StyledLink to='./pages/A_propos'>À propos</StyledLink>
+            <StyledLink to='about'>À propos</StyledLink>
           </Nav>
           
         </HeaderStyle>

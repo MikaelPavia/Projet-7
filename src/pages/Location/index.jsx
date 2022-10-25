@@ -1,9 +1,13 @@
 import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-const ChevronIcon = <FontAwesomeIcon icon={faChevronUp} />
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+// import { useState } from "react"
+// const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
+
+import CollapseText from "../../components/Collapse/collapseText"
+
 
 const Body = styled.div``
 
@@ -96,67 +100,78 @@ height: 50px;
 width: 180px;
 margin-top: 15px;
 `
-const DivDescritpionEquipments = styled.div `
-heigth: 200px;
-width: 44%;
-`
-const TitleDivDescritpionEquipments = styled.div`
-width: 100%;
-height: 50px;
-background-color: #EF6C6C;
-color: white;
-font-size: 20px;
-border-radius: 10px;
-display:flex;
-justify-content: space-between;
-align-items: center;
-padding-right: 18px;
-padding-left: 18px;
+// const DivDescritpionEquipments = styled.div `
+// heigth: 200px;
+// width: 44%;
+// `
+// const TitleDivDescritpionEquipments = styled.div`
+// width: 100%;
+// height: 50px;
+// background-color: #EF6C6C;
+// color: white;
+// font-size: 20px;
+// border-radius: 10px;
+// display:flex;
+// justify-content: space-between;
+// align-items: center;
+// padding-right: 18px;
+// padding-left: 18px;
 
-`
-const Description = styled.div`
-height: auto;
-width: 100%;
-font-size: 18px;
-background-color: #f2f2f2;
-border-radius: 10px;
-padding-top: 15px;
-padding-right: 20px;
-padding-left: 15px;
-padding-bottom: 50px;
-color: #EF6C6C;
-`
+// `
+// const Description = styled.div`
+// height: auto;
+// width: 100%;
+// font-size: 18px;
+// background-color: #f2f2f2;
+// border-radius: 10px;
+// padding-top: 15px;
+// padding-right: 20px;
+// padding-left: 15px;
+// padding-bottom: 50px;
+// color: #EF6C6C;
+// `
 
-const Equipments = styled.div`
-height: auto;
-width: 100%;
-font-size: 18px;
-background-color: #f2f2f2;
-border-radius: 10px;
-padding-top: 15px;
-padding-right: 20px;
-padding-left: 15px;
-padding-bottom: 50px;
-color: #EF6C6C;
-`
+// const Equipments = styled.div`
+// height: auto;
+// width: 100%;
+// font-size: 18px;
+// background-color: #f2f2f2;
+// border-radius: 10px;
+// padding-top: 15px;
+// padding-right: 20px;
+// padding-left: 15px;
+// padding-bottom: 50px;
+// color: #EF6C6C;
+// `
 
-const Icon = styled.div`
-font-size: 30px;
-`
+// const Icon = styled.div`
+// font-size: 30px;
+// transform: rotate(0deg);
+
+// color: red;
+// transform: rotate(0deg);
+
+// `
+
+// const AnimIcon = styled.div`
+// transform: rotate(360deg);
+// transition: transform 1500ms ease-out 1000ms;
+
+// `
+
 
 
 function FicheLogement() {
   const { id } = useParams()
-  
-    return (
+  const loc = LocList.find((location) => {
+    return id === location.id
+  })
+    return  (
       
       <Body>
         
-        {LocList.map((loc) => (
-          
+        {/* {LocList.map((loc) => ( */}
         
-      <div key={loc.id}>
-        {loc.id === id ? (
           <div>
           <Banner src={loc.cover}></Banner>
 
@@ -164,8 +179,8 @@ function FicheLogement() {
           <Div>
               <Title>{loc.title}</Title>
               <DivOwner>
-                <Name>{loc['host'].name}</Name>
-                <ProfilePicture src={loc['host'].picture}></ProfilePicture>
+                <Name>{loc.host.name}</Name>
+                <ProfilePicture src={loc.host.picture}></ProfilePicture>
               </DivOwner>
           </Div>
 
@@ -183,8 +198,13 @@ function FicheLogement() {
         </DivInfos>
 
         <DivInfos>
+          <CollapseText
+          description={loc.description}
+          $isOpen>
+          </CollapseText>
+
+          {/* <Div>
           
-          <Div>
             <DivDescritpionEquipments>
                 <TitleDivDescritpionEquipments><div>Description</div><Icon>{ChevronIcon}</Icon></TitleDivDescritpionEquipments>
                 <Description>
@@ -199,18 +219,16 @@ function FicheLogement() {
                   </Equipments>
                 </DivDescritpionEquipments>
             
-          </Div>
+          </Div> */}
+
         </DivInfos>
 
         </div>
-        ): (
-          null
-          )}
-
-      </div>
-      ))}
+        
+      {/* ))} */}
       </Body>
     )
+    
   }
   
   export default FicheLogement

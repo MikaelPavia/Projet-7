@@ -56,8 +56,8 @@ padding-right: 20px;
 padding-left: 15px;
 padding-bottom: 50px;
 color: #EF6C6C;
-${(props) =>
-    props.$isOpen &&
+${() =>
+    .$isOpen &&
     `color: white; border-radius: 30px; background-color: #5843E4;`}
 
 `
@@ -70,7 +70,19 @@ function CollapseText ({description}){  // passer en props le titre et la descri
             <DivDescritpionEquipments>
                 <TitleDivDescritpionEquipments>
                     <div>Description</div>
-                    <Icon onClick={() => setIsOpen(false)}>{ChevronIcon}</Icon>
+
+                    {/* <Icon onClick={() => setIsOpen(false)}>{ChevronIcon}</Icon> */}
+
+                    <Icon onClick={() => {
+
+                        if(isOpen === true ){
+                            setIsOpen(false)
+                        }else {
+                            setIsOpen(true)
+                        }
+                    
+                    }}>{ChevronIcon}</Icon>
+
                 </TitleDivDescritpionEquipments>
                 
                     <Description $isOpen>

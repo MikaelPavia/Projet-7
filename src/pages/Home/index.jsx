@@ -2,7 +2,7 @@ import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import PrintBanner from "../../components/Banner"
 import Cards from "../../components/Card"
-
+// import BanniereImg from '../../assets/banniere.png'
 const Body = styled.div`
 display: flex;
 flex-direction: column;
@@ -27,6 +27,11 @@ function Home() {
       <Body>
         
         <PrintBanner></PrintBanner>
+
+        {/* <PrintBanner
+        picture={BanniereImg}
+        alt=''
+        ></PrintBanner> */}
 
         <CardsContainer>
           {LocList.map((loc) => (

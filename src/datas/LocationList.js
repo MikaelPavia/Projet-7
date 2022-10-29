@@ -656,7 +656,7 @@ const LocList = [
     ]
     }
     
-    ]
+    ];
 
-    export default LocList
+    export default LocList;
 

@@ -1,13 +1,15 @@
 import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
-// import { useState } from "react"
-// const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 import CollapseText from "../../components/Collapse/collapseText"
+import CollapseList from "../../components/Collapse/collapseList"
+import Rating from '@mui/material/Rating';
+import Colors from "../../utils/style/style"
 
+const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
+const VoidStarIcon = <FontAwesomeIcon icon={faStar}/>
 
 const Body = styled.div``
 
@@ -18,7 +20,7 @@ border-radius: 10px;
 display: block;
 margin-left: auto;
 margin-right: auto;
-margin-top: 20px;
+margin-top: 60px;
 `
 
 const DivInfos = styled.div`
@@ -45,7 +47,7 @@ height: 64px;
 width: auto;
 margin-top: 15px;
 text-align: left;
-color: #EF6C6C;
+color: ${Colors.primary};
 font-size: 40px;
 `
 
@@ -53,7 +55,7 @@ const City = styled.div`
 height: 20px;
 width: auto;
 text-align: left;
-color: #EF6C6C;
+color: ${Colors.primary};
 font-size: 17px;
 `
 
@@ -61,7 +63,7 @@ const Name = styled.div`
 height: 50px;
 width: auto;
 text-align: right;
-color: #EF6C6C;
+color: ${Colors.primary};
 font-size: 21px;
 margin-right: 10px;
 
@@ -84,7 +86,7 @@ justify-content: space-between;
 const Tag = styled.div`
 height: 25px;
 width: auto;
-background-color: #EF6C6C;
+background-color: ${Colors.primary};
 color: white;
 display: flex;
 justify-content: center;
@@ -97,82 +99,36 @@ padding-right: 30px;
 
 const Ratings = styled.div`
 height: 50px;
-width: 180px;
+width: 160px;
 margin-top: 15px;
+display: flex;
+justify-content:space-between;
+color: blue;
 `
-// const DivDescritpionEquipments = styled.div `
-// heigth: 200px;
-// width: 44%;
-// `
-// const TitleDivDescritpionEquipments = styled.div`
-// width: 100%;
-// height: 50px;
-// background-color: #EF6C6C;
-// color: white;
-// font-size: 20px;
-// border-radius: 10px;
-// display:flex;
-// justify-content: space-between;
-// align-items: center;
-// padding-right: 18px;
-// padding-left: 18px;
-
-// `
-// const Description = styled.div`
-// height: auto;
-// width: 100%;
-// font-size: 18px;
-// background-color: #f2f2f2;
-// border-radius: 10px;
-// padding-top: 15px;
-// padding-right: 20px;
-// padding-left: 15px;
-// padding-bottom: 50px;
-// color: #EF6C6C;
-// `
-
-// const Equipments = styled.div`
-// height: auto;
-// width: 100%;
-// font-size: 18px;
-// background-color: #f2f2f2;
-// border-radius: 10px;
-// padding-top: 15px;
-// padding-right: 20px;
-// padding-left: 15px;
-// padding-bottom: 50px;
-// color: #EF6C6C;
-// `
-
-// const Icon = styled.div`
-// font-size: 30px;
-// transform: rotate(0deg);
-
-// color: red;
-// transform: rotate(0deg);
-
-// `
-
-// const AnimIcon = styled.div`
-// transform: rotate(360deg);
-// transition: transform 1500ms ease-out 1000ms;
-
-// `
 
 
+const Div3 = styled.div`
+display: flex;
+justify-content: space-between;
+width: 100%;
+`
+
+
+const Divtest = styled.div`
+width: 45%;
+`
 
 function FicheLogement() {
   const { id } = useParams()
+  
   const loc = LocList.find((location) => {
     return id === location.id
   })
+  const rating = parseInt(loc.rating) 
     return  (
       
       <Body>
         
-        {/* {LocList.map((loc) => ( */}
-        
-          <div>
           <Banner src={loc.cover}></Banner>
 
           <DivInfos>
@@ -193,37 +149,41 @@ function FicheLogement() {
               <Tag key={loc + index}>{tag}</Tag>
             ))}
             </Tags>
-            <Ratings></Ratings>
+            <Ratings>
+              <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={VoidStarIcon} readOnly />
+            </Ratings>
           </Div>
         </DivInfos>
 
+
+
+
+
+
+
+
+
         <DivInfos>
-          <CollapseText
-          description={loc.description}
-          $isOpen>
+<Div3>
+  <Divtest>
+<CollapseText
+          title= "Description"
+          description={loc.description}>
           </CollapseText>
-
-          {/* <Div>
+          </Divtest>
+          <Divtest>
+          {/* <CollapseList list={'ceci est ma liste'}>
+          </CollapseList> */}
+          <CollapseList title='Équipements'></CollapseList>
+          </Divtest>
           
-            <DivDescritpionEquipments>
-                <TitleDivDescritpionEquipments><div>Description</div><Icon>{ChevronIcon}</Icon></TitleDivDescritpionEquipments>
-                <Description>
-                    {loc.description}
-                </Description>
-            </DivDescritpionEquipments>
-            
-            <DivDescritpionEquipments>
-                <TitleDivDescritpionEquipments><div>Equipements</div><Icon>{ChevronIcon}</Icon></TitleDivDescritpionEquipments>
-                  <Equipments>
-
-                  </Equipments>
-                </DivDescritpionEquipments>
-            
-          </Div> */}
+</Div3>
+          
+          
 
         </DivInfos>
 
-        </div>
+        
         
       {/* ))} */}
       </Body>

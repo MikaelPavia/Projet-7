@@ -7,7 +7,7 @@ import { BrowserRouter,
 
 import Home from './pages/Home';
 import FicheLogement from './pages/Location';
-import APropos from './pages/A_propos';
+import APropos from './pages/About';
 import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';

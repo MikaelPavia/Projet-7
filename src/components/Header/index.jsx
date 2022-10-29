@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import Logo from '../../assets/HeaderLogo.png'
 
 const HeaderContainer = styled.div`
 display: flex;
@@ -16,15 +17,13 @@ width: 90%;
 // border: 5px solid red;
 // `
 
-const HeaderLogo = styled.div `
-height: 80px;
-width: 200px;
+const HeaderLogo = styled.img `
+height: 60px;
+width: 180px;
 font-size: 80px;
 display:flex;
 justify-content: center;
 align-items: center;
-color: #EF6C6C;
-font-weight: bold;
 `
 
 const Nav = styled.nav `
@@ -47,8 +46,8 @@ function Header() {
     return (
       <HeaderContainer>
         <HeaderStyle>
-          {/* <HeaderLogo src='' alt=''/> */}
-          <HeaderLogo>Kasa</HeaderLogo>
+          <HeaderLogo src={Logo} alt='Logo Kasa'/>
+          {/* <HeaderLogo></HeaderLogo> */}
           
           <Nav>
             <StyledLink to='/'>Accueil</StyledLink>

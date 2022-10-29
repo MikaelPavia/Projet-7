@@ -28,9 +28,9 @@ align-items: center;
 
 const Nav = styled.nav `
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 300px
+    width: 260px
 `
 const StyledLink = styled(Link)`
     padding: 15px;

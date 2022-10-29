@@ -3,7 +3,7 @@ import LocList from '../../datas/LocationList'
 import PrintBanner from "../../components/Banner"
 import Cards from "../../components/Card"
 // import BanniereImg from '../../assets/banniere.png'
-const Body = styled.div`
+const Div = styled.div`
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -24,7 +24,8 @@ padding-bottom: 40px;
 
 function Home() {
     return (
-      <Body>
+      <body>
+      <Div>
         
         <PrintBanner></PrintBanner>
 
@@ -48,7 +49,8 @@ function Home() {
           ))}
 
         </CardsContainer>
-      </Body>
+      </Div>
+      </body>
     )
   }
 

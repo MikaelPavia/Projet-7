@@ -11,7 +11,7 @@ import APropos from './pages/About';
 import Error from './pages/Error';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import './utils/style/style.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

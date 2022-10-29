@@ -29,11 +29,13 @@ margin-top: 150px;
 `
 function Error() {
     return (
+      
       <ErrorDiv>
         <ErrorCode>404</ErrorCode>
         <ErrorSentence>Oups ! La page que vous demandez n'existe pas.</ErrorSentence>
         <HomeLink to=''>Retourner sur la page d'accueil</HomeLink>
       </ErrorDiv>
+      
     )
   }
   

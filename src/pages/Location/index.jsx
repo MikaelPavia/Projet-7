@@ -9,12 +9,12 @@ import Rating from '@mui/material/Rating';
 import Colors from "../../utils/style/style"
 
 const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
-const VoidStarIcon = <FontAwesomeIcon icon={faStar}/>
+const EmptyStarIcon = <FontAwesomeIcon icon={faStar}/>
 
 const Body = styled.div``
 
 const Banner = styled.img`
-height: 350px;
+height: 415px;
 width: 90%;
 border-radius: 10px;
 display: block;
@@ -118,6 +118,9 @@ const Divtest = styled.div`
 width: 45%;
 `
 
+
+
+
 function FicheLogement() {
   const { id } = useParams()
   
@@ -150,7 +153,7 @@ function FicheLogement() {
             ))}
             </Tags>
             <Ratings>
-              <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={VoidStarIcon} readOnly />
+              <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={EmptyStarIcon} readOnly />
             </Ratings>
           </Div>
         </DivInfos>

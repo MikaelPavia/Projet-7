@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import Logo from '../../assets/FooterLogo.png'
+
 const FooterStyle = styled.div`
 display: flex;
 flex-direction: column;
@@ -26,12 +27,17 @@ font-size: 18px;
 `
 
 function Footer() {
+
     return (
+
       <FooterStyle>
+
         <FooterLogo src={Logo} alt='Logo Kasa'></FooterLogo>
+
         <DivFooter>2020 Kaza, All rights reserved</DivFooter>
+
       </FooterStyle>
     )
-  }
-  
-  export default Footer
+}
+
+export default Footer

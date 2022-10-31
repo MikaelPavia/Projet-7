@@ -9,6 +9,7 @@ import Rating from '@mui/material/Rating';
 import Colors from "../../utils/style/style"
 
 const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
+
 const EmptyStarIcon = <FontAwesomeIcon icon={faStar}/>
 
 const Body = styled.div``
@@ -23,7 +24,15 @@ margin-right: auto;
 margin-top: 60px;
 `
 
-const DivInfos = styled.div`
+const SectionInfos = styled.div`
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+width: 90%;
+`
+
+const SectionCollapses = styled.div`
 display: block;
 margin-left: auto;
 margin-right: auto;
@@ -105,93 +114,99 @@ display: flex;
 justify-content:space-between;
 color: blue;
 `
-
-
-const Div3 = styled.div`
+const DivCollapses = styled.div`
 display: flex;
 justify-content: space-between;
 width: 100%;
 `
-
-
-const Divtest = styled.div`
+const ContainerCollapse = styled.div`
 width: 45%;
 `
 
-
-
-
 function FicheLogement() {
+
   const { id } = useParams()
   
   const loc = LocList.find((location) => {
+
     return id === location.id
+
   })
+
   const rating = parseInt(loc.rating) 
+
     return  (
       
-      <Body>
+        <Body>
+
+            <Banner src={loc.cover}></Banner>
+
+            <SectionInfos>
+
+              <Div>
+              
+                <Title>{loc.title}</Title>
+                
+                <DivOwner>
+                  
+                    <Name>{loc.host.name}</Name>
+                    
+                    <ProfilePicture src={loc.host.picture}></ProfilePicture>
         
-          <Banner src={loc.cover}></Banner>
+                </DivOwner>
+              
+              </Div>
 
-          <DivInfos>
-          <Div>
-              <Title>{loc.title}</Title>
-              <DivOwner>
-                <Name>{loc.host.name}</Name>
-                <ProfilePicture src={loc.host.picture}></ProfilePicture>
-              </DivOwner>
-          </Div>
+              <City>{loc.location}</City>
 
-          <City>{loc.location}</City>
-          
-          <Div>
-          
-            <Tags>
-            {loc.tags.map((tag, index) => (
-              <Tag key={loc + index}>{tag}</Tag>
-            ))}
-            </Tags>
-            <Ratings>
-              <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={EmptyStarIcon} readOnly />
-            </Ratings>
-          </Div>
-        </DivInfos>
+              <Div>
 
+                <Tags>
+                  
+                    {loc.tags.map((tag, index) => (
 
+                        <Tag key={loc + index}>{tag}</Tag>
 
+                    ))}
 
+                </Tags>
+                
+                  <Ratings>
 
+                      <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={EmptyStarIcon} readOnly />
 
+                  </Ratings>
+                
+              </Div>
 
+            </SectionInfos>
 
+            <SectionCollapses>
 
-        <DivInfos>
-<Div3>
-  <Divtest>
-<CollapseText
-          title= "Description"
-          description={loc.description}>
-          </CollapseText>
-          </Divtest>
-          <Divtest>
-          {/* <CollapseList list={'ceci est ma liste'}>
-          </CollapseList> */}
-          <CollapseList title='Équipements'></CollapseList>
-          </Divtest>
-          
-</Div3>
-          
-          
+                <DivCollapses>
 
-        </DivInfos>
+                    <ContainerCollapse>
 
-        
-        
-      {/* ))} */}
-      </Body>
-    )
-    
-  }
+                        <CollapseText
+                          title= "Description"
+                          description={loc.description}>
+                        </CollapseText>
+
+                    </ContainerCollapse>
+
+                    <ContainerCollapse>
+
+                        <CollapseList title='Équipements'></CollapseList>
+
+                    </ContainerCollapse>
+
+                </DivCollapses>
+
+            </SectionCollapses>
+
+        </Body>
+)
+
+}
   
   export default FicheLogement

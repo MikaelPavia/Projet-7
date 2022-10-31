@@ -27,36 +27,42 @@ align-items: center;
 `
 
 const Nav = styled.nav `
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 260px
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 260px
 `
 const StyledLink = styled(Link)`
-    padding: 15px;
-    color: #EF6C6C;
-    text-decoration: none;
-    font-size: 25px;
+padding: 15px;
+color: #EF6C6C;
+text-decoration: none;
+font-size: 25px;
     &:hover {
-      text-decoration: underline;
+    text-decoration: underline;
     }
 
 `
 function Header() {
     return (
-      <HeaderContainer>
-        <HeaderStyle>
-          <HeaderLogo src={Logo} alt='Logo Kasa'/>
-          {/* <HeaderLogo></HeaderLogo> */}
-          
-          <Nav>
-            <StyledLink to='/'>Accueil</StyledLink>
-            <StyledLink to='about'>À propos</StyledLink>
-          </Nav>
-          
-        </HeaderStyle>
-      </HeaderContainer>
+
+        <HeaderContainer>
+
+            <HeaderStyle>
+              
+                <HeaderLogo src={Logo} alt='Logo Kasa'/>
+
+                    <Nav>
+
+                    <StyledLink to='/'>Accueil</StyledLink>
+
+                    <StyledLink to='about'>À propos</StyledLink>
+
+                  </Nav>
+
+            </HeaderStyle>
+            
+        </HeaderContainer>
     )
-  }
-  
-  export default Header
+}
+
+export default Header

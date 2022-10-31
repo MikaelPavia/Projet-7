@@ -2,7 +2,7 @@ import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import PrintBanner from "../../components/Banner"
 import Cards from "../../components/Card"
-// import BanniereImg from '../../assets/banniere.png'
+
 const Div = styled.div`
 display: flex;
 flex-direction: column;
@@ -23,35 +23,37 @@ padding-bottom: 40px;
 `
 
 function Home() {
+
     return (
-      <body>
-      <Div>
-        
-        <PrintBanner></PrintBanner>
-
-        {/* <PrintBanner
-        picture={BanniereImg}
-        alt=''
-        ></PrintBanner> */}
-
-        <CardsContainer>
-          {LocList.map((loc) => (
-
-          <Cards 
-          key={loc.id}
-          // LocArray={LocList} 
-          id={loc.id}
-          picture={loc.cover}
-          title={loc.title}>
+      
+        <Div>
           
-          </Cards>
+           <PrintBanner></PrintBanner>
 
-          ))}
+          {/* <PrintBanner
+          picture={BanniereImg}
+          alt=''
+          ></PrintBanner> */}
 
-        </CardsContainer>
-      </Div>
-      </body>
+          <CardsContainer>
+
+              {LocList.map((loc) => (
+
+                  <Cards 
+                  key={loc.id}
+                  // LocArray={LocList} 
+                  id={loc.id}
+                  picture={loc.cover}
+                  title={loc.title}>
+                  </Cards>
+
+            ))}
+
+          </CardsContainer>
+          
+        </Div>
+      
     )
-  }
+}
 
   export default Home

@@ -1,32 +1,32 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
-// import { useNavigate } from "react-router-dom"
 
+// import { useNavigate } from "react-router-dom"
 // const navigate = useNavigate();
 
 const CardBlock = styled(Link)`
-  height: 330px;
-  width: 360px;
-  background: rgb(97,0,0);
-  background: linear-gradient(0deg, rgba(97,0,0,0.5956757703081232) 0%, rgba(239,108,108,1) 20%, rgba(239,108,108,1) 100%);
-  margin: 15px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 15px;
-  align-items: center;
-  text-decoration: none;
+height: 330px;
+width: 360px;
+background: rgb(97,0,0);
+background: linear-gradient(0deg, rgba(97,0,0,0.5956757703081232) 0%, rgba(239,108,108,1) 20%, rgba(239,108,108,1) 100%);
+margin: 15px;
+border-radius: 10px;
+display: flex;
+flex-direction: column;
+padding-bottom: 15px;
+align-items: center;
+text-decoration: none;
   &:hover {
-    box-shadow: grey 5px 5px 5px;
+  box-shadow: grey 5px 5px 5px;
   }
 `
 const CardImg = styled.img `
-  width: 95%;
-  border-radius: 10px;
-  background-color: ;
-  height: 270px;
-  margin-top: 8px;
+width: 95%;
+border-radius: 10px;
+background-color: ;
+height: 270px;
+margin-top: 8px;
 `
 
 const CardTitle = styled.div `
@@ -38,37 +38,42 @@ margin-right: 100px;
 `
 
 function Cards ( {LocArray, id ,picture, title} ) {
-    return (
-        <CardBlock to={'Location/' + id}>
-            <CardImg src={picture} alt="Illustration d'une location"></CardImg>
-            <CardTitle>{title}</CardTitle>
-        </CardBlock>
-    )
 
-    // if(){
-    //   return (
-    //     <Card to={'./pages/Location/' + id}>
-    //         <CardImg src={picture} alt="Illustration d'une location"></CardImg>
-    //         <CardTitle>{title}</CardTitle>
-    //     </Card>
-    // )
-    // }
-    
-    
+  return (
+
+      <CardBlock to={'Location/' + id}>
+
+        <CardImg src={picture} alt="Illustration d'une location"></CardImg>
+
+        <CardTitle>{title}</CardTitle>
+        
+      </CardBlock>
+  )
+
+// if(){
+//   return (
+//     <Card to={'./pages/Location/' + id}>
+//         <CardImg src={picture} alt="Illustration d'une location"></CardImg>
+//         <CardTitle>{title}</CardTitle>
+//     </Card>
+// )
+// }
+
+
 }
 
 Cards.propTypes = {
-    id: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    
-  }
-  
+id: PropTypes.string.isRequired,
+picture: PropTypes.string.isRequired,
+title: PropTypes.string.isRequired,
+
+}
+
 Cards.defaultProps = {
-    id: '',
-    picture: '',
-    title: '',
-    
-  }
+id: '',
+picture: '',
+title: '',
+
+}
 
 export default Cards

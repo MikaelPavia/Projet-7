@@ -14,22 +14,6 @@ border-radius: 15px;
 position: relative;
 z-index: 0;
 `
-
-// const DivBanner = styled.div`
-// width: 90%;
-// height: 200px;
-// margin-top: 100px;
-// display: flex;
-// justify-content: center;
-// align-items: center;
-// background-image: url(${BanniereImg});
-// background-size: cover;
-// z-index: 1;
-// border-radius: 15px;
-// `
-
-
-
 const Banner = styled.div `
 height: 50px;
 color: white;
@@ -40,10 +24,7 @@ font-size: 45px;
 position: absolute;
 z-index: 1;
 `
-
-
 const BannerBackgroundColor = styled.div `
-
 min-width: 100%;
 height: 200px;
 border-radius: 15px;
@@ -54,11 +35,11 @@ z-index: -10;
 `
 
 function PrintBanner() {
-return (
-    <DivBanner>
-        <BannerBackgroundColor></BannerBackgroundColor>
-        <Banner>Chez vous, partout et ailleurs</Banner>
-    </DivBanner>
+    return (
+        <DivBanner>
+            <BannerBackgroundColor></BannerBackgroundColor>
+            <Banner>Chez vous, partout et ailleurs</Banner>
+        </DivBanner>
 
 // {/* <DivBanner src={picture} alt={alt}>
 // <Banner>Chez vous, partout et ailleurs</Banner>

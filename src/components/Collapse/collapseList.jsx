@@ -4,8 +4,9 @@ import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
+
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
-  
+
 
 const TitleDivDescritpionEquipments = styled.div`
 width: 100%;
@@ -24,7 +25,7 @@ font-size: 30px;
 transform: rotate(0deg);
 margin-right: 10px;
 transition: transform 500ms;
-${(props) =>
+    ${(props) =>
     props.isOpen &&
     `
     transform: rotate(180deg);`}
@@ -59,14 +60,13 @@ transform: scaleY(0);
 transition: transform 100ms;
 position: sticky;
 z-index: -10;
-${(props) =>
+    ${(props) =>
     props.isOpen &&
     `
     transform: scaleY(1)`}
 
 `
 const Ul = styled.ul`
-
 list-style: none;
 line-height: 1.5;
 padding: 30px 15px 30px 10px;
@@ -80,49 +80,66 @@ font-size: 21px;
 
 
 function CollapseList ({title}){  // passer en props le titre et la description, puis mettre contenu directement dans collapse about
+    
     const [isOpen, setIsOpen] = useState(false)
+    
     const { id } = useParams()
+    
     const loc = LocList.find((location) => {
+    
         return id === location.id
-      })
+    })
+
     return ( 
 
         <div> 
-                <TitleDivDescritpionEquipments>
-                    <TitleIcon>
+
+            <TitleDivDescritpionEquipments>
+
+                <TitleIcon>
+
                     <Title>{title}</Title>
 
-                    <Icon isOpen={isOpen}
-                    onClick={() => {
+                        <Icon isOpen={isOpen} onClick={() => {
 
-                        if(isOpen === true ){
-                            setIsOpen(false)
-                            console.log({isOpen})
-                        }else {
-                            setIsOpen(true)
-                            console.log({isOpen})
-                        }
-                    
-                    }}>{ChevronIcon}</Icon>
-</TitleIcon>
-                </TitleDivDescritpionEquipments>
-                
-                    <Description isOpen={isOpen}>
-                        <div>
-                        <Ul>
+                            if(isOpen === true ){
+
+                                setIsOpen(false)
+
+                            }else {
+
+                                setIsOpen(true)
+                            }
+
+                        }}>{ChevronIcon}</Icon>
+
+                </TitleIcon>
+
+            </TitleDivDescritpionEquipments>
+
+            <Description isOpen={isOpen}>
+
+                <div>
+
+                    <Ul>
+
                         {loc.equipments.map((equipment, index) => (
+
                             <li key={loc + index}>{equipment}</li>
+
                         ))}
-                        </Ul>
-                        </div>
-                        
+
+                    </Ul>
                     
-                    </Description>
-            
+                </div>
+
+
+            </Description>
+
         </div>
-    
+
     )
-    
+
 }
 
 export default CollapseList

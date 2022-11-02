@@ -8,12 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Colors from "../../utils/style/style"
 
-const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
-
-const EmptyStarIcon = <FontAwesomeIcon icon={faStar} color= '#D3D3D3'/>
-
-
-
 function Rating (rating) {
 
     const { id } = useParams()
@@ -33,12 +27,13 @@ function Rating (rating) {
     for (let i = 0; i < 5; i++ ) {
 
       if (i < ratings){
-        stars.push(FullStarIcon)
+        stars.push(<FontAwesomeIcon icon={faStar} color={Colors.primary} key={id + '-' + i}/>)
       }else {
-        stars.push(EmptyStarIcon)
+        stars.push(<FontAwesomeIcon icon={faStar} color= '#D3D3D3' key={id + '-' + i}/>)
       }
 
     }
+    
     return (
 
         <div className="ratings">

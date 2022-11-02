@@ -66,15 +66,17 @@ function FicheLogement() {
                 <div className="divContainer">
                 
                     <Tags
-                    key={'-'}
-                    tags={loc.tags}
-                    loc={loc}>
+                    // key={'-'}
+                    // tags={loc.tags}
+                    // loc={loc}
+                    >
 
                     </Tags>
                 
                     <Rating
-                    key={'_'}
-                    rating={loc.rating}>
+                    // key={'_'}
+                    // rating={loc.rating}
+                    >
                       
                     </Rating>
                 

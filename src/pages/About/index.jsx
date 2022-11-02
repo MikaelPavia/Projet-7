@@ -1,51 +1,17 @@
-import CollapseText from "../../components/Collapse/collapseText"
+import CollapseText from "../../components/Collapses/CollapseText"
 import PrintBanner from "../../components/Banner"
-import styled from "styled-components"
-
-
-const Div = styled.div`
-height: auto;
-margin-top: 70px;`
-
-const DivInfos = styled.div`
-display: block;
-margin-left: auto;
-margin-right: auto;
-width: 90%;
-`
-
-
-const DivCollapses = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-height: auto;
-margin-top: 100px;
-width: 80%;
-margin-left: auto;
-margin-right: auto;
-`
-
-
-// const DivCollapse= styled.div`
-// display: block;
-// margin-left: auto;
-// margin-right: auto;
-// width: 75%;
-// margin-top: 20px;
-// `
-
-
+// import styled from "styled-components"
+import '../About/style.scss'
 
 function APropos() {
 
     return (
       
-        <Div>
+        <div className="divContainerAbout">
 
-            <DivInfos><PrintBanner></PrintBanner></DivInfos>
+            <PrintBanner className='BannerAbout'></PrintBanner>
 
-            <DivCollapses>
+            <div className="divCollapsesAbout">
               
                 <CollapseText title='Fiabilité' description={'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.'}></CollapseText>
           
@@ -55,9 +21,9 @@ function APropos() {
           
                 <CollapseText title='Sécurité' description={'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.'}></CollapseText>
                 
-            </DivCollapses>
+            </div>
         
-        </Div>
+        </div>
     
     )
 

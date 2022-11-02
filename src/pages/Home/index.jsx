@@ -1,32 +1,15 @@
-import styled from "styled-components"
+// import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import PrintBanner from "../../components/Banner"
-import Cards from "../../components/Card"
+import Card from "../../components/Card"
+import '../Home/style.scss'
 
-const Div = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-`
-
-const CardsContainer = styled.div `
-height: auto;
-width: 90%;
-background-color: #f7F7F7;
-margin-top: 100px;
-border-radius: 15px;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-padding-top: 40px;
-padding-bottom: 40px;
-`
 
 function Home() {
 
     return (
       
-        <Div>
+        <div className="homeContainer">
           
            <PrintBanner></PrintBanner>
 
@@ -35,23 +18,23 @@ function Home() {
           alt=''
           ></PrintBanner> */}
 
-          <CardsContainer>
+          <div className="cardsContainer">
 
               {LocList.map((loc) => (
 
-                  <Cards 
+                  <Card
                   key={loc.id}
                   // LocArray={LocList} 
                   id={loc.id}
                   picture={loc.cover}
                   title={loc.title}>
-                  </Cards>
+                  </Card>
 
             ))}
 
-          </CardsContainer>
+          </div>
           
-        </Div>
+        </div>
       
     )
 }

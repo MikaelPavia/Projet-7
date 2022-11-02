@@ -1,0 +1,82 @@
+.bannerLocation {
+height: 415px;
+width: 90%;
+border-radius: 10px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 60px;
+}
+
+.sectionInfos {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+width: 90%;
+}
+
+.sectionCollapses {
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 25px;
+width: 90%;
+}
+
+.divCollapses {
+display: flex;
+justify-content: space-between;
+width: 100%;
+}
+
+.divContainer{
+display: flex;
+justify-content: space-between;
+}
+
+.divOwner {
+    display: flex;
+justify-content: space-between;
+width: 180px;
+align-items: center;
+}
+
+.title {
+    height: 64px;
+width: auto;
+margin-top: 15px;
+text-align: left;
+// color: ${Colors.primary};
+color: #EF6C6C;
+font-size: 40px;
+}
+
+.city {
+    height: 20px;
+width: auto;
+text-align: left;
+// color: ${Colors.primary};
+font-size: 17px;
+color: #EF6C6C;
+}
+
+.name {
+    height: 50px;
+    width: auto;
+    text-align: right;
+    // color: ${Colors.primary};
+    color:#EF6C6C;
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.profilePicture {
+    height: 80px;
+width: 80px;
+border-radius: 40px;
+}
+
+.containerCollapse {
+    width: 45%;
+}

@@ -1,0 +1,32 @@
+.titleDivCollapse {
+    width: 100%;
+height: 50px;
+background-color: #EF6C6C;
+color: white;
+font-size: 21px;
+border-radius: 10px;
+display: flex;
+align-items: center;
+}
+
+.titleCollapse {
+    margin-left: 10px;
+}
+
+.titleIcon {
+    width: 100%;
+display:flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.ulCollapse {
+    list-style: none;
+line-height: 1.5;
+padding: 30px 15px 30px 10px;
+font-size: 21px;
+}
+
+.collapseText {
+    padding: 25px 15px 60px 15px;
+}

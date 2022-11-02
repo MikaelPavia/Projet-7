@@ -1,210 +1,114 @@
-import styled from "styled-components"
+// import styled from "styled-components"
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faStar } from '@fortawesome/free-solid-svg-icons'
-import CollapseText from "../../components/Collapse/collapseText"
-import CollapseList from "../../components/Collapse/collapseList"
-import Rating from '@mui/material/Rating';
-import Colors from "../../utils/style/style"
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faStar } from '@fortawesome/free-solid-svg-icons'
+import CollapseText from "../../components/Collapses/CollapseText"
+import CollapseList from "../../components/Collapses/CollapseList"
+import Owner from '../../components/Owner/index'
+import Tags from '../../components/Tags'
+import Rating from '../../components/Rating'
+// import Colors from "../../utils/style/style"
 
-const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
 
-const EmptyStarIcon = <FontAwesomeIcon icon={faStar}/>
+import './style.scss'
 
-const Body = styled.div``
+// const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
 
-const Banner = styled.img`
-height: 415px;
-width: 90%;
-border-radius: 10px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 60px;
-`
+// const EmptyStarIcon = <FontAwesomeIcon icon={faStar} color= '#D3D3D3'/>
 
-const SectionInfos = styled.div`
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 25px;
-width: 90%;
-`
-
-const SectionCollapses = styled.div`
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 25px;
-width: 90%;
-`
-
-const Div = styled.div`
-display: flex;
-justify-content: space-between;
-`
-const DivOwner = styled.div`
-display: flex;
-justify-content: space-between;
-width: 180px;
-align-items: center;
-`
-
-const Title = styled.div`
-height: 64px;
-width: auto;
-margin-top: 15px;
-text-align: left;
-color: ${Colors.primary};
-font-size: 40px;
-`
-
-const City = styled.div`
-height: 20px;
-width: auto;
-text-align: left;
-color: ${Colors.primary};
-font-size: 17px;
-`
-
-const Name = styled.div`
-height: 50px;
-width: auto;
-text-align: right;
-color: ${Colors.primary};
-font-size: 21px;
-margin-right: 10px;
-
-`
-
-const ProfilePicture = styled.img`
-height: 80px;
-width: 80px;
-border-radius: 40px;
-`
-
-const Tags = styled.div`
-height: 50px;
-width: auto;
-margin-top: 15px;
-display: flex;
-justify-content: space-between;
-
-`
-const Tag = styled.div`
-height: 25px;
-width: auto;
-background-color: ${Colors.primary};
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 10px;
-margin-right: 15px;
-padding-left: 30px;
-padding-right: 30px;
-`
-
-const Ratings = styled.div`
-height: 50px;
-width: 160px;
-margin-top: 15px;
-display: flex;
-justify-content:space-between;
-color: blue;
-`
-const DivCollapses = styled.div`
-display: flex;
-justify-content: space-between;
-width: 100%;
-`
-const ContainerCollapse = styled.div`
-width: 45%;
-`
 
 function FicheLogement() {
 
   const { id } = useParams()
   
   const loc = LocList.find((location) => {
-
+    
     return id === location.id
 
   })
 
-  const rating = parseInt(loc.rating) 
+  // const rating = parseInt(loc.rating) 
 
+  
+
+  //   for (let i = 0; i < 5; i++ ) {
+
+  //     if (i < rating){
+  //       stars.push(FullStarIcon)
+  //     }else {
+  //       stars.push(EmptyStarIcon)
+  //     }
+
+  //   }
+  
     return  (
       
-        <Body>
+        <div>
 
-            <Banner src={loc.cover}></Banner>
+            <img src={loc.cover} alt='' className="bannerLocation"></img>
 
-            <SectionInfos>
+            <div className="sectionInfos">
 
-              <Div>
+                <div className="divContainer">
               
-                <Title>{loc.title}</Title>
-                
-                <DivOwner>
-                  
-                    <Name>{loc.host.name}</Name>
-                    
-                    <ProfilePicture src={loc.host.picture}></ProfilePicture>
-        
-                </DivOwner>
+                    <div className="title">{loc.title}</div>
+
+                    <Owner
+                    name={loc.host.name}
+                    picture={loc.host.picture}
+                    ></Owner>
               
-              </Div>
+                </div>
 
-              <City>{loc.location}</City>
+                <div className="city">{loc.location}</div>
 
-              <Div>
-
-                <Tags>
-                  
-                    {loc.tags.map((tag, index) => (
-
-                        <Tag key={loc + index}>{tag}</Tag>
-
-                    ))}
-
-                </Tags>
+                <div className="divContainer">
                 
-                  <Ratings>
+                    <Tags
+                    key={'-'}
+                    tags={loc.tags}
+                    loc={loc}>
 
-                      <Rating  name="read-only" value={rating} icon={FullStarIcon} emptyIcon={EmptyStarIcon} readOnly />
-
-                  </Ratings>
+                    </Tags>
                 
-              </Div>
+                    <Rating
+                    key={'_'}
+                    rating={loc.rating}>
+                      
+                    </Rating>
+                
+                </div>
+              
+            </div>
 
-            </SectionInfos>
+            <div className="sectionCollapses">
 
-            <SectionCollapses>
+                <div className="divCollapses">
 
-                <DivCollapses>
-
-                    <ContainerCollapse>
+                    <div className="containerCollapse">
 
                         <CollapseText
                           title= "Description"
                           description={loc.description}>
                         </CollapseText>
 
-                    </ContainerCollapse>
+                    </div>
 
-                    <ContainerCollapse>
+                    <div className="containerCollapse">
 
-                        <CollapseList title='Équipements'></CollapseList>
+                        <CollapseList 
+                        title='Équipements'
+                        list= {loc.equipments}
+                        ></CollapseList>
 
-                    </ContainerCollapse>
+                    </div>
 
-                </DivCollapses>
+                </div>
 
-            </SectionCollapses>
+            </div>
 
-        </Body>
+        </div>
 )
 
 }

@@ -3,21 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import PropTypes from 'prop-types'
+import '../Collapses/style.scss'
 
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
 
-const TitleDivDescritpionEquipments = styled.div`
-width: 100%;
-height: 50px;
-background-color: #EF6C6C;
-color: white;
-font-size: 21px;
-border-radius: 10px;
-display: flex;
-align-items: center;
-z-index: 10;
-`
 
 const Icon = styled.div`
 font-size: 30px;
@@ -29,17 +19,10 @@ transition: transform 500ms;
     `
     transform: rotate(180deg);`}
 `
-const Title = styled.div`
-margin-left: 10px;
-`
-const TitleIcon = styled.div`
-width: 100%;
-display:flex;
-justify-content: space-between;
-align-items: center;
-`
+
 const Description = styled.div`
 // height: auto;
+
 width: 100%;
 font-size: 21px;
 background-color: #f2f2f2;
@@ -48,22 +31,19 @@ margin-top: -30px;
 color: #EF6C6C;
 transform-origin: 50% top;
 transform: scaleY(0);
-transition: transform 150ms;
+transition: transform 500ms;
 z-index: -10;
-position: sticky;
+position: relative;
     ${(props) =>
     props.isOpen &&
     `
     transform: scaleY(1)`}
+`
 
-`
-const Text = styled.p`
-padding: 25px 15px 60px 15px;
-`
 
 const CollapseContainer = styled.div`
 height: 80px;
-transition:500ms;
+transition: 500ms;
     ${(props) =>
     props.isOpen &&
     `
@@ -80,29 +60,25 @@ function CollapseText ({title, description}){  // passer en props le titre et la
 
         <CollapseContainer isOpen={isOpen}> 
 
-            <TitleDivDescritpionEquipments>
+            <div className="titleDivCollapse">
 
-                <TitleIcon>
+                <div className="titleIcon">
 
-                    <Title>{title}</Title>
+                    <div className="titleCollapse">{title}</div>
 
                     <Icon isOpen={isOpen} onClick={() => {
 
-                        if(isOpen === true ){
-                            setIsOpen(false)
-                        }else {
-                            setIsOpen(true)
-                        }
+                        setIsOpen(!isOpen)
 
                     }}>{ChevronIcon}</Icon>
 
-                </TitleIcon>
+                </div>
 
-            </TitleDivDescritpionEquipments>
+            </div>
 
             <Description isOpen={isOpen}>
 
-                <Text>{description}</Text>
+                <p className="collapseText">{description}</p>
 
             </Description>
 

@@ -1,42 +1,19 @@
-import styled from "styled-components"
+// import styled from "styled-components"
 import Logo from '../../assets/FooterLogo.png'
+import '../Footer/style.scss'
 
-const FooterStyle = styled.div`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-width: auto;
-height: 200px;
-background-color: black;
-margin-top: 100px;
-`
-const FooterLogo = styled.img`
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 50px;
-`
-
-const DivFooter = styled.div`
-color: white;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
-`
 
 function Footer() {
 
     return (
 
-      <FooterStyle>
+      <div className="footerStyle">
 
-        <FooterLogo src={Logo} alt='Logo Kasa'></FooterLogo>
+        <img src={Logo} alt='Logo Kasa' className="footerLogo"></img>
 
-        <DivFooter>2020 Kaza, All rights reserved</DivFooter>
+        <div className="footerDiv">2020 Kaza, All rights reserved</div>
 
-      </FooterStyle>
+      </div>
     )
 }
 

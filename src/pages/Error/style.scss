@@ -1,0 +1,27 @@
+.errorContainer {
+    width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 80px;
+}
+
+.errorCode {
+    font-size: 17rem;
+color: #EF6C6C;
+font-weight: bold;
+}
+
+.errorSentence {
+    color: #EF6C6C;
+font-size: 2rem;
+margin-top: 50px;
+}
+
+.homeLink {
+    color: #EF6C6C;
+font-size: 1.5rem;
+margin-top: 150px;
+}

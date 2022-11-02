@@ -1,45 +1,22 @@
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+// import styled from "styled-components"
+// import { Link } from "react-router-dom"
+import '../Error/style.scss'
 
-const ErrorDiv = styled.div `
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 80px;
-`
-const ErrorCode = styled.div`
-font-size: 17rem;
-color: #EF6C6C;
-font-weight: bold;
 
-`
-const ErrorSentence = styled.div`
-color: #EF6C6C;
-font-size: 2rem;
-margin-top: 50px;
-`
 
-const HomeLink = styled(Link)`
-color: #EF6C6C;
-font-size: 1.5rem;
-margin-top: 150px;
-`
 function Error() {
-
+ 
     return (
       
-      <ErrorDiv>
+      <div className="errorContainer">
 
-        <ErrorCode>404</ErrorCode>
+        <div className='errorCode'>404</div>
 
-        <ErrorSentence>Oups ! La page que vous demandez n'existe pas.</ErrorSentence>
+        <div className="errorSentence">Oups ! La page que vous demandez n'existe pas.</div>
 
-        <HomeLink to=''>Retourner sur la page d'accueil</HomeLink>
+        <a href='/' className="homeLink">Retourner sur la page d'accueil</a>
         
-      </ErrorDiv>
+      </div>
       
     )
   }

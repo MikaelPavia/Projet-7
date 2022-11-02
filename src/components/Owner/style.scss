@@ -1,0 +1,22 @@
+.divOwner {
+    display: flex;
+justify-content: space-between;
+width: 180px;
+align-items: center;
+}
+
+.name {
+    height: 50px;
+    width: auto;
+    text-align: right;
+    // color: ${Colors.primary};
+    color:#EF6C6C;
+    font-size: 21px;
+    margin-right: 10px;
+}
+
+.profilePicture {
+    height: 80px;
+width: 80px;
+border-radius: 40px;
+}

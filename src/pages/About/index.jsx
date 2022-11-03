@@ -2,14 +2,17 @@ import CollapseText from "../../components/Collapses/CollapseText"
 import PrintBanner from "../../components/Banner"
 // import styled from "styled-components"
 import '../About/style.scss'
+import bannerImgAbout  from "../../assets/banniereAbout.png"
 
-function APropos() {
+function About() {
 
     return (
       
         <div className="divContainerAbout">
 
-            <PrintBanner className='BannerAbout'></PrintBanner>
+            <PrintBanner
+           banniereImg={bannerImgAbout}></PrintBanner>
+            
 
             <div className="divCollapsesAbout">
               
@@ -29,4 +32,4 @@ function APropos() {
 
   }
   
-  export default APropos
+  export default About

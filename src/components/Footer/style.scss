@@ -2,7 +2,7 @@
     display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-around;
+justify-content: space-evenly;
 width: auto;
 height: 200px;
 background-color: black;
@@ -17,7 +17,7 @@ font-size: 50px;
 }
 
 .footerDiv {
-    color: white;
+    color: #fff;
 display: flex;
 align-items: center;
 justify-content: center;

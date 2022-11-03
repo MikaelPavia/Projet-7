@@ -1,0 +1,21 @@
+.rightArrow {
+    position: absolute;
+    top: 40%;
+    right: 20px;
+    font-size: 6rem;
+    color: #EF6C6C;
+    &:hover {
+        cursor: pointer;
+    }
+  }
+  
+.leftArrow {
+    position: absolute;
+    top: 40%;
+    left: 20px;
+    font-size: 6rem;
+    color: #EF6C6C;
+    &:hover {
+        cursor: pointer;
+    }
+}

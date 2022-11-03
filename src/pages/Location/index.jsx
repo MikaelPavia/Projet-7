@@ -3,6 +3,7 @@ import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 // import { faStar } from '@fortawesome/free-solid-svg-icons'
+import Slideshow from '../../components/Slideshow'
 import CollapseText from "../../components/Collapses/CollapseText"
 import CollapseList from "../../components/Collapses/CollapseList"
 import Owner from '../../components/Owner/index'
@@ -16,6 +17,7 @@ import './style.scss'
 // const FullStarIcon = <FontAwesomeIcon icon={faStar} color={Colors.primary}/>
 
 // const EmptyStarIcon = <FontAwesomeIcon icon={faStar} color= '#D3D3D3'/>
+
 
 
 function FicheLogement() {
@@ -42,11 +44,13 @@ function FicheLogement() {
 
   //   }
   
+  const ImgData = loc.pictures
     return  (
       
         <div>
 
-            <img src={loc.cover} alt='' className="bannerLocation"></img>
+            {/* <img src={loc.cover} alt='' className="bannerLocation"></img> */}
+            <Slideshow slides={ImgData}></Slideshow>
 
             <div className="sectionInfos">
 

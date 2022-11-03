@@ -3,6 +3,7 @@ import LocList from '../../datas/LocationList'
 import PrintBanner from "../../components/Banner"
 import Card from "../../components/Card"
 import '../Home/style.scss'
+import BanniereImg from '../../assets/banniere.png'
 
 
 function Home() {
@@ -11,7 +12,9 @@ function Home() {
       
         <div className="homeContainer">
           
-           <PrintBanner></PrintBanner>
+           <PrintBanner
+           banniereImg={BanniereImg}
+           text='Chez vous, partout et ailleurs'></PrintBanner>
 
           {/* <PrintBanner
           picture={BanniereImg}

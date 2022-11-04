@@ -1,32 +1,10 @@
-import styled from "styled-components"
+
 import { useState } from "react"
 import '../Slideshow/style.scss'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
-
-
-
-
-const SlideImage = styled.img`
-    
-    width: 100%;
-    height:500px;
-    object-fit: cover;
-    border-radius: 20px;
-`
-
-const StyledSlider = styled.div`
-position: relative;
-// display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 100px;
-width: 90%;
-`
-
-
 
 
 const Slideshow = ({ slides }) => {
@@ -47,7 +25,7 @@ const Slideshow = ({ slides }) => {
     if (length > 1) {
         return (
             
-            <StyledSlider>
+            <div className="sliderStyle">
                 
                 {ChevronIconLeft}
                 {ChevronIconRight}
@@ -59,7 +37,7 @@ const Slideshow = ({ slides }) => {
                         <div key={index}>
                             
                             {index === current && (
-                                <SlideImage src={slide} alt=''/>
+                                <img src={slide} alt='' className="slideImg"/>
                                 
                             )}
                             
@@ -69,24 +47,24 @@ const Slideshow = ({ slides }) => {
                     );
                 })}
                  
-            </StyledSlider>
+            </div>
         )
     } else {
 
         return (
             
-            <StyledSlider>
+            <div className="sliderStyle">
                 
                 {slides.map((slide, index) => {
                     return (
                         <div key={index}>
                             {index === current && (
-                                <SlideImage src={slide} alt=''/>
+                                <img src={slide} alt='' className="slideImg"/>
                             )}
                         </div>
                     );
                 })}
-            </StyledSlider>
+            </div>
         )
     }
     

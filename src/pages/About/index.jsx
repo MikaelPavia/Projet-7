@@ -1,6 +1,4 @@
 import CollapseText from "../../components/Collapses/CollapseText"
-import PrintBanner from "../../components/Banner"
-// import styled from "styled-components"
 import '../About/style.scss'
 import bannerImgAbout  from "../../assets/banniereAbout.png"
 
@@ -10,8 +8,12 @@ function About() {
       
         <div className="divContainerAbout">
 
-            <PrintBanner
-           banniereImg={bannerImgAbout}></PrintBanner>
+            <div className='divBannerAbout'>
+
+                <img src={bannerImgAbout} alt='' className='bannerImgAbout'></img>
+                <div className='bannerBackgroundColorAbout'></div>
+
+            </div>
             
 
             <div className="divCollapsesAbout">

@@ -45,6 +45,7 @@ function FicheLogement() {
   //   }
   
   const ImgData = loc.pictures
+  
     return  (
       
         <div>
@@ -58,35 +59,48 @@ function FicheLogement() {
               
                     <div className="title">{loc.title}</div>
 
-                    <Owner
-                    name={loc.host.name}
-                    picture={loc.host.picture}
-                    ></Owner>
+                    
               
                 </div>
 
                 <div className="city">{loc.location}</div>
 
-                <div className="divContainer">
                 
-                    <Tags
-                    // key={'-'}
-                    // tags={loc.tags}
-                    // loc={loc}
-                    >
+                <div className='divOwnerRatingsTags'>
 
-                    </Tags>
+                    <div className="divContainerOwnerRatings">
                 
-                    <Rating
-                    // key={'_'}
-                    // rating={loc.rating}
-                    >
-                      
-                    </Rating>
+                        <Owner
+                        name={loc.host.name}
+                        picture={loc.host.picture}
+                        ></Owner>
+                    
+                
+                        <Rating
+                        // key={'_'}
+                        // rating={loc.rating}
+                        >
+                        
+                        </Rating>
+                
+                    </div>
+
+                    <div className='divTags'>
+
+                        <Tags
+                        // key={'-'}
+                        // tags={loc.tags}
+                        // loc={loc}
+                        >
+
+                        </Tags>
+
+                    </div>
                 
                 </div>
-              
+
             </div>
+                
 
             <div className="sectionCollapses">
 
@@ -95,8 +109,8 @@ function FicheLogement() {
                     <div className="containerCollapse">
 
                         <CollapseText
-                          title= "Description"
-                          description={loc.description}>
+                            title= "Description"
+                            description={loc.description}>
                         </CollapseText>
 
                     </div>
@@ -115,7 +129,7 @@ function FicheLogement() {
             </div>
 
         </div>
-)
+    )
 
 }
   

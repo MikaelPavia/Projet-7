@@ -1,22 +1,46 @@
 .tags {
-    height: 50px;
+    height: auto;
 width: auto;
 margin-top: 15px;
 display: flex;
-justify-content: space-between;
+flex-wrap: wrap;
 }
 
 .tag {
-    height: 25px;
+    height: 20px;
 width: auto;
-// background-color: ${Colors.primary};
 background-color: #EF6C6C;
 color: white;
 display: flex;
 justify-content: center;
 align-items: center;
 border-radius: 10px;
-margin-right: 15px;
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 13px;
+margin: 4px 8px 4px 0;
+}
+
+@media all and (min-width: 992px) {
+
+    .tags {
+    height: 50px;
+    width: auto;
+    }  
+
+    .tag {
+    height: 25px;
+    margin: 4px;
+    font-size: 19px;
+    }
+
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media all and (max-width: 768px) {
 }

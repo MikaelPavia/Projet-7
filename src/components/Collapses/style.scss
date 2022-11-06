@@ -1,6 +1,6 @@
 .titleDivCollapse {
     width: 100%;
-height: 50px;
+height: 35px;
 background-color: #EF6C6C;
 color: white;
 font-size: 21px;
@@ -29,4 +29,25 @@ font-size: 21px;
 
 .collapseText {
     padding: 25px 15px 60px 15px;
+}
+
+
+@media all and (min-width: 992px) {
+
+
+    .titleDivCollapse {
+    height: 50px;
+    }
+    
+    
+                
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media all and (max-width: 768px) {
 }

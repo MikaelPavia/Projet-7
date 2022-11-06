@@ -21,11 +21,12 @@ display: block;
 margin-left: auto;
 margin-right: auto;
 margin-top: 25px;
-width: 90%;
+width: 95%;
 }
 
 .divCollapses {
 display: flex;
+flex-direction: column;
 justify-content: space-between;
 width: 100%;
 }
@@ -42,21 +43,16 @@ justify-content: space-between;
     justify-content: space-between;
     }
 
-.divOwner {
-    display: flex;
-justify-content: space-between;
-width: 180px;
-align-items: center;
-}
+
 
 .title {
-    height: 64px;
-width: auto;
+    height: auto;
+width: 100%;
 margin-top: 15px;
 text-align: left;
 // color: ${Colors.primary};
 color: #EF6C6C;
-font-size: 25px;
+font-size: 30px;
 }
 
 .city {
@@ -64,28 +60,28 @@ font-size: 25px;
 width: auto;
 text-align: left;
 // color: ${Colors.primary};
-font-size: 20px;
+font-size: 18px;
 color: #EF6C6C;
 }
 
-.name {
-    height: 50px;
-    width: auto;
-    text-align: right;
-    // color: ${Colors.primary};
-    color:#EF6C6C;
-    font-size: 21px;
-    margin-right: 10px;
-}
+// .name {
+//     height: 50px;
+//     width: auto;
+//     text-align: right;
+//     // color: ${Colors.primary};
+//     color:#EF6C6C;
+//     font-size: 21px;
+//     margin-right: 10px;
+// }
 
-.profilePicture {
-    height: 80px;
-width: 80px;
-border-radius: 40px;
-}
+// .profilePicture {
+//     height: 80px;
+// width: 80px;
+// border-radius: 40px;
+// }
 
 .containerCollapse {
-    width: 45%;
+    width: 100%;
 }
 
 
@@ -138,12 +134,21 @@ border-radius: 40px;
                 height: 100px;
             }
 
-            .divTags {
-                width: auto;
-                display: block;
-                margin-left: 0;
-                margin-top: 15px;
-            }
+            
+
+
+            .sectionCollapses {
+                width: 90%;
+                }
+
+            .divCollapses {
+                flex-direction: row;
+                }
+
+                .containerCollapse {
+                    width: 45%;
+                }
+                
 }
 
 

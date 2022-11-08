@@ -1,29 +1,48 @@
 // import styled from "styled-components"
-// import { Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 import  '../Card/style.scss'
 
 
 // import { useNavigate } from "react-router-dom"
-// const navigate = useNavigate();
+
 
 
 function Cards ( {LocArray, id ,picture, title} ) {
 
-  return (
+  // const navigate = useNavigate();
 
-        <a className="cardBlock" href={"Location/" + id}>
+  console.log(LocArray.id)
 
-        <img src={picture} alt="Illustration d'une location" className="cardImg"></img>
+//  const  az = true
 
-        <div className="cardTitle">{title}</div>
-        
-        </a>
+
+  
+
+    return (
+
+      // <a className="cardBlock" href={"Location/" + id}>
+
+      // <div className="cardBlock" onClick={ ()=> navigate("Location/" + id)}>
       
-  )
+        <Link className="cardBlock" to={"Location/" + id}>
+
+          <img src={picture} alt="Illustration d'une location" className="cardImg"></img>
+
+          <div className="cardTitle">{title}</div>
+      
+          </Link>
+        
+      // </div>
+      
+    
+)
+  }
+
+  
 
 
-}
+
 
 Cards.propTypes = {
 id: PropTypes.string.isRequired,

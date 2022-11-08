@@ -1,27 +1,57 @@
 .errorContainer {
-    width: 100%;
+  width: 100%;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 80px;
+  margin-top: 200px;
 }
 
 .errorCode {
-    font-size: 17rem;
+    font-size: 140px;
 color: #EF6C6C;
 font-weight: bold;
 }
 
 .errorSentence {
     color: #EF6C6C;
-font-size: 2rem;
+font-size: 25px;
 margin-top: 50px;
+text-align: center;
 }
 
 .homeLink {
     color: #EF6C6C;
-font-size: 1.5rem;
-margin-top: 150px;
+font-size: 20px;
+margin-top: 110px;
+}
+
+@media all and (min-width: 992px) {
+
+    .errorContainer {
+      margin-top: 80px;
+    }
+    
+    .errorCode {
+        font-size: 17rem;
+    }
+    
+    .errorSentence {
+    font-size: 2rem;
+    }
+    
+    .homeLink {
+    font-size: 1.5rem;
+    }
+
+}
+
+
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media all and (max-width: 768px) {
 }

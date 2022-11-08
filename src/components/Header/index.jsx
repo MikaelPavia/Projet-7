@@ -1,5 +1,5 @@
 // import styled from 'styled-components'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Logo from '../../assets/HeaderLogo.png'
 import '../Header/style.scss'
 
@@ -15,9 +15,9 @@ function Header() {
 
                     <nav className='headerNav'>
 
-                    <a href='/' className='navLinks'>Accueil</a>
+                    <Link to='/' className='navLinks'>Accueil</Link>
 
-                    <a href='../about' className='navLinks'>À propos</a>
+                    <Link to='../about' className='navLinks'>À propos</Link>
 
                   </nav>
 

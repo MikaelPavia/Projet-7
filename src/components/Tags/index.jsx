@@ -2,7 +2,7 @@ import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
 import '../Tags/style.scss'
 
-function Tags (tags) {
+function Tags () {
     
     const { id } = useParams()
     const loc = LocList.find((location) => {

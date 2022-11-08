@@ -33,8 +33,8 @@ width: 100%;
 
 .divContainer{
 display: flex;
-flex-direction: row-reverse;
-justify-content: space-between;
+flex-direction: column;
+// justify-content: space-between;
 }
 
 .divContainerOwnerRatings{
@@ -63,22 +63,6 @@ text-align: left;
 font-size: 18px;
 color: #EF6C6C;
 }
-
-// .name {
-//     height: 50px;
-//     width: auto;
-//     text-align: right;
-//     // color: ${Colors.primary};
-//     color:#EF6C6C;
-//     font-size: 21px;
-//     margin-right: 10px;
-// }
-
-// .profilePicture {
-//     height: 80px;
-// width: 80px;
-// border-radius: 40px;
-// }
 
 .containerCollapse {
     width: 100%;
@@ -154,8 +138,9 @@ color: #EF6C6C;
 
 
 @media all and (min-width: 768px) and (max-width: 992px) {
-
+    
 }
+
 
 @media all and (max-width: 768px) {
 }

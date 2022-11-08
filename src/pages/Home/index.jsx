@@ -27,7 +27,7 @@ function Home() {
 
                   <Card
                   key={loc.id}
-                  // LocArray={LocList} 
+                  LocArray={loc} 
                   id={loc.id}
                   picture={loc.cover}
                   title={loc.title}>

@@ -11,13 +11,13 @@ const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
 const Icon = styled.div`
 font-size: 30px;
-transform: rotate(0deg);
+transform: rotate(180deg);
 margin-right: 10px;
 transition: transform 500ms;
     ${(props) =>
     props.isOpen &&
     `
-    transform: rotate(180deg);`}
+    transform: rotate(0deg);`}
 `
 
 const Description = styled.div`

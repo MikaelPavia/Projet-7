@@ -1,4 +1,4 @@
-import '../Rating/style.scss'
+import '../Rating/Rating.scss'
 
 
 import LocList from '../../datas/LocationList'

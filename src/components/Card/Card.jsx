@@ -1,7 +1,7 @@
 // import styled from "styled-components"
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
-import  '../Card/style.scss'
+import  '../Card/Card.scss'
 
 
 // import { useNavigate } from "react-router-dom"

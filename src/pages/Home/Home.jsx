@@ -1,8 +1,8 @@
 // import styled from "styled-components"
 import LocList from '../../datas/LocationList'
-import PrintBanner from "../../components/Banner"
-import Card from "../../components/Card"
-import '../Home/style.scss'
+import PrintBanner from "../../components/Banner/Banner.jsx"
+import Card from "../../components/Card/Card.jsx"
+import '../Home/Home.scss'
 import BanniereImg from '../../assets/banniere.png'
 
 

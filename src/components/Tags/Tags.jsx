@@ -1,6 +1,6 @@
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
-import '../Tags/style.scss'
+import '../Tags/Tags.scss'
 
 function Tags () {
     

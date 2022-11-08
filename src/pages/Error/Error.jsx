@@ -1,6 +1,6 @@
 // import styled from "styled-components"
 // import { Link } from "react-router-dom"
-import '../Error/style.scss'
+import '../Error/Error.scss'
 
 
 

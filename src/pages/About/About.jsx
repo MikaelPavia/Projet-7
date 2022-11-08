@@ -1,5 +1,5 @@
 import CollapseText from "../../components/Collapses/CollapseText"
-import '../About/style.scss'
+import '../About/About.scss'
 import bannerImgAbout  from "../../assets/banniereAbout.png"
 
 function About() {

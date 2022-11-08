@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import { useParams } from "react-router-dom"
-import './style.scss'
+import './Collapse.scss'
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
 

@@ -1,4 +1,4 @@
-import '../Banner/style.scss'
+import '../Banner/Banner.scss'
 // import styled from "styled-components"
 
 

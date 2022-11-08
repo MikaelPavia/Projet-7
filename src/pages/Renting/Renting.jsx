@@ -1,16 +1,16 @@
 import LocList from '../../datas/LocationList'
 import { useParams } from "react-router-dom"
-import Slideshow from '../../components/Slideshow'
+import Slideshow from '../../components/Slideshow/Slideshow.jsx'
 import CollapseText from "../../components/Collapses/CollapseText"
 import CollapseList from "../../components/Collapses/CollapseList"
-import Owner from '../../components/Owner/index'
-import Tags from '../../components/Tags'
-import Rating from '../../components/Rating'
+import Owner from '../../components/Owner/Owner.jsx'
+import Tags from '../../components/Tags/Tags.jsx'
+import Rating from '../../components/Rating/Rating.jsx'
 
-import Error404 from '../Error/index'
+import Error404 from '../Error/Error.jsx'
 
 
-import './style.scss'
+import './Renting.scss'
 
 // import { useNavigate } from "react-router-dom"
 //const navigate = useNavigate();
@@ -27,12 +27,11 @@ function FicheLogement() {
 
   })
 
-  const ImgData = loc.pictures
-
   if (!loc) {
     return <Error404 />
   }
-
+  
+  const ImgData = loc.pictures
     return  (
         
         <div>

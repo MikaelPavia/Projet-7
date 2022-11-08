@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import PropTypes from 'prop-types'
-import '../Collapses/style.scss'
+import '../Collapses/Collapse.scss'
 
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
@@ -27,17 +27,20 @@ width: 100%;
 font-size: 21px;
 background-color: #f2f2f2;
 border-radius: 10px;
-margin-top: -30px;
+margin-top: -25px;
 color: #EF6C6C;
 transform-origin: 50% top;
 transform: scaleY(0);
-transition: transform 500ms;
+transition: transform 300ms;
 z-index: -10;
 position: relative;
+opacity: 0.5;
     ${(props) =>
     props.isOpen &&
     `
-    transform: scaleY(1)`}
+    transform: scaleY(1);
+    opacity: 1;
+    margin-top: -30px;`}
 `
 
 

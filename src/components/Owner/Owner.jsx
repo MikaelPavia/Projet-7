@@ -1,4 +1,4 @@
-import '../Owner/style.scss'
+import '../Owner/Owner.scss'
 import PropTypes from 'prop-types'
 
 

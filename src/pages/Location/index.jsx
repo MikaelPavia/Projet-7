@@ -18,6 +18,8 @@ import './style.scss'
 function FicheLogement() {
 
   const { id } = useParams()
+
+  
   
   const loc = LocList.find((location) => {
     
@@ -25,14 +27,11 @@ function FicheLogement() {
 
   })
 
+  const ImgData = loc.pictures
+
   if (!loc) {
     return <Error404 />
   }
-
-  const ImgData = loc.pictures
-  
-
-
 
     return  (
         

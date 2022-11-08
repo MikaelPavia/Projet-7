@@ -10,20 +10,12 @@ import  '../Card/Card.scss'
 
 function Cards ( {LocArray, id ,picture, title} ) {
 
-  // const navigate = useNavigate();
-
   console.log(LocArray.id)
-
-//  const  az = true
 
 
   
 
     return (
-
-      // <a className="cardBlock" href={"Location/" + id}>
-
-      // <div className="cardBlock" onClick={ ()=> navigate("Location/" + id)}>
       
         <Link className="cardBlock" to={"Location/" + id}>
 
@@ -32,12 +24,8 @@ function Cards ( {LocArray, id ,picture, title} ) {
           <div className="cardTitle">{title}</div>
       
           </Link>
-        
-      // </div>
-      
-    
-)
-  }
+    )
+}
 
   
 

@@ -8,9 +8,11 @@ import { faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
 const Slideshow = ({ slides }) => {
+
     const [current, setCurrent] = useState(0);
     const length = slides.length;
-
+    
+    console.log(length)
     const nextSlide = () => {
         setCurrent(current ===  length - 1 ? 0 : current + 1);
     };
@@ -18,11 +20,15 @@ const Slideshow = ({ slides }) => {
     const prevSlide = () => {
         setCurrent(current === 0 ? length - 1 : current - 1);
     };
-    
-    const ChevronIconLeft = <FontAwesomeIcon icon={faChevronLeft} className="leftArrow" onClick={prevSlide}/>
-    const ChevronIconRight = <FontAwesomeIcon icon={faChevronRight} className="rightArrow" onClick={nextSlide}/>
+
+    let ChevronIconLeft = ''
+    let ChevronIconRight = ''
 
     if (length > 1) {
+    ChevronIconLeft = <FontAwesomeIcon icon={faChevronLeft} className="leftArrow" onClick={prevSlide}/>
+    ChevronIconRight = <FontAwesomeIcon icon={faChevronRight} className="rightArrow" onClick={nextSlide}/>
+    }
+
         return (
             
             <div className="sliderStyle">
@@ -30,14 +36,14 @@ const Slideshow = ({ slides }) => {
                 {ChevronIconLeft}
                 {ChevronIconRight}
                
-    
+                <div className="testcarousel">{current + 1}/{length}</div>
                 {slides.map((slide, index) => {
                     return (
                         
                         <div key={index}>
                             
                             {index === current && (
-                                <img src={slide} alt='' className="slideImg"/>
+                                <img src={slide} alt='Une pièce du logement' className="slideImg"/>
                                 
                             )}
                             
@@ -49,24 +55,7 @@ const Slideshow = ({ slides }) => {
                  
             </div>
         )
-    } else {
-
-        return (
-            
-            <div className="sliderStyle">
-                
-                {slides.map((slide, index) => {
-                    return (
-                        <div key={index}>
-                            {index === current && (
-                                <img src={slide} alt='' className="slideImg"/>
-                            )}
-                        </div>
-                    );
-                })}
-            </div>
-        )
-    }
+    
     
 
 }

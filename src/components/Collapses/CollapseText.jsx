@@ -47,6 +47,7 @@ opacity: 0.5;
 const CollapseContainer = styled.div`
 height: 80px;
 transition: 500ms;
+width: 100%;
     ${(props) =>
     props.isOpen &&
     `

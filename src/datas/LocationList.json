@@ -1,4 +1,4 @@
-const LocList = [
+[
 
     {
     "id": "c67ab8a7",
@@ -656,7 +656,7 @@ const LocList = [
     ]
     }
     
-    ];
+    ]
 
-    export default LocList;
+  
 

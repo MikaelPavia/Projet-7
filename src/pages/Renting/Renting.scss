@@ -9,11 +9,12 @@ margin-top: 60px;
 }
 
 .sectionInfos {
-display: block;
+display: flex;
+justify-content: space-between;
+flex-direction: column;
+width: 90%;
 margin-left: auto;
 margin-right: auto;
-margin-top: 25px;
-width: 90%;
 }
 
 .sectionCollapses {
@@ -31,16 +32,17 @@ justify-content: space-between;
 width: 100%;
 }
 
-.divContainer{
+.divContainerTitleCityTags{
 display: flex;
 flex-direction: column;
-// justify-content: space-between;
+width: 100%;
 }
 
 .divContainerOwnerRatings{
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+    width: 100%;
     }
 
 
@@ -69,11 +71,6 @@ color: #EF6C6C;
 }
 
 
-.divOwnerRatingsTags {
-    display: flex;
-    flex-direction: column-reverse;
-}
-
 @media all and (min-width: 992px) {
 
     .title {
@@ -94,33 +91,25 @@ color: #EF6C6C;
     font-size: 20px;
     color: #EF6C6C;
     }
-    .divContainer{
+    .divContainerTitleCityTags{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         width: 70%;
         }
+
+
+
+
         .divContainerOwnerRatings{
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: flex-end;
-            // width: 100%;
+            width: 40%;
             height: 170px;
-            margin-top: -90px;
             
             }
-
-            .divOwnerRatingsTags {
-                display: flex;
-                flex-direction: row-reverse;
-                justify-content: space-between;
-                height: 100px;
-            }
-
-            
-
-
             .sectionCollapses {
                 width: 90%;
                 }
@@ -132,6 +121,16 @@ color: #EF6C6C;
                 .containerCollapse {
                     width: 45%;
                 }
+
+                .sectionInfos {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    margin-top: 25px;
+                    width: 90%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    }
                 
 }
 

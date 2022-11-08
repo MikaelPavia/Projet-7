@@ -19,8 +19,6 @@ function FicheLogement() {
 
   const { id } = useParams()
 
-  
-  
   const loc = LocList.find((location) => {
     
     return location.id === id 
@@ -32,6 +30,7 @@ function FicheLogement() {
   }
   
   const ImgData = loc.pictures
+
     return  (
         
         <div>
@@ -40,18 +39,21 @@ function FicheLogement() {
 
             <div className="sectionInfos">
 
-                <div className="divContainer">
+                <div className="divContainerTitleCityTags">
               
                     <div className="title">{loc.title}</div>
 
                     
                     <div className="city">{loc.location}</div>
+
+                    <Tags
+                        loc={loc}
+                        >
+
+                        </Tags>
                 </div>
 
-                {/* <div className="city">{loc.location}</div> */}
-
                 
-                <div className='divOwnerRatingsTags'>
 
                     <div className="divContainerOwnerRatings">
                 
@@ -62,27 +64,15 @@ function FicheLogement() {
                     
                 
                         <Rating
-                        // key={'_'}
-                        // rating={loc.rating}
+                        locId = {loc.id}
+                        rating = {loc.rating}
                         >
                         
                         </Rating>
                 
                     </div>
-
-                    <div className='divTags'>
-
-                        <Tags
-                        // key={'-'}
-                        // tags={loc.tags}
-                        // loc={loc}
-                        >
-
-                        </Tags>
-
-                    </div>
                 
-                </div>
+                
 
             </div>
                 

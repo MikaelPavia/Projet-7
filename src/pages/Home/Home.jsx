@@ -1,12 +1,31 @@
-// import styled from "styled-components"
-import LocList from '../../datas/LocationList'
+
+// import {useState, useEffect} from 'react';
+
 import PrintBanner from "../../components/Banner/Banner.jsx"
 import Card from "../../components/Card/Card.jsx"
 import '../Home/Home.scss'
 import BanniereImg from '../../assets/banniere.png'
 
+import RentingsList from "../../datas/LocationList.json"
 
 function Home() {
+  
+// console.log(RentingsList)
+//   const [rentings, setRentings] = useState([]); 
+
+//   useEffect(() => {
+
+//     fetch(RentingsList)
+
+//     .then((response) => {
+//       console.log(response.type)
+//       return response.json()
+//     })
+//     .then((data) => {
+//       console.log(data)
+//       setRentings(data)
+//     })
+//   }, []) 
 
     return (
       
@@ -14,16 +33,12 @@ function Home() {
           
            <PrintBanner
            banniereImg={BanniereImg}
-           text='Chez vous, partout et ailleurs'></PrintBanner>
-
-          {/* <PrintBanner
-          picture={BanniereImg}
-          alt=''
-          ></PrintBanner> */}
+           text='Chez vous, partout et ailleurs'>
+           </PrintBanner>
 
           <div className="cardsContainer">
 
-              {LocList.map((loc) => (
+              {RentingsList.map((loc) => (
 
                   <Card
                   key={loc.id}

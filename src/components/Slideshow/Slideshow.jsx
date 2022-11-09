@@ -37,6 +37,7 @@ const Slideshow = ({ slides }) => {
                 {ChevronIconRight}
                
                 <div className="testcarousel">{current + 1}/{length}</div>
+                
                 {slides.map((slide, index) => {
                     return (
                         

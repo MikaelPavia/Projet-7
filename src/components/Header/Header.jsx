@@ -1,4 +1,3 @@
-// import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/HeaderLogo.png'
 import '../Header/Header.scss'

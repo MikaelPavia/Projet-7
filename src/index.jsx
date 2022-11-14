@@ -13,6 +13,8 @@ import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import '../src/style.scss';
 
+import DatasLocProvider from './components/Provider/Provider.jsx';
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
@@ -25,7 +27,7 @@ root.render(
  
       <Routes>
         
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={ <DatasLocProvider>  <Home />  </DatasLocProvider>} />
 
           <Route path='/Location/:id' element={<Renting />}/>
             

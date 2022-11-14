@@ -8,7 +8,7 @@ border-radius: 10px;
 display: flex;
 flex-direction: column;
 padding-bottom: 15px;
-align-items: center;
+align-items: flex-start;
 text-decoration: none;
   &:hover {
   box-shadow: grey 5px 5px 5px;
@@ -19,16 +19,17 @@ text-decoration: none;
 .cardImg {
     width: 95%;
 border-radius: 10px;
-height: 90%;
+height: 85%;
 margin-top: 8px;
+margin-left: 8px;
 }
 
 .cardTitle {
     color: white;
-width: 60%;
+width: 65%;
 font-size: 18px;
 margin-top: 15px;
-margin-right: 100px;
 margin-bottom: 10px;
-height: 10%;
+margin-left: 8px;
+height: 15%;
 }

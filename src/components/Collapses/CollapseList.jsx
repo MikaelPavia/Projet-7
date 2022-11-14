@@ -24,7 +24,7 @@ function CollapseList ({title, list}){
 
                     <div className="titleCollapse">{title}</div>
 
-                        <div isOpen={isOpen} onClick={() => {
+                        <div onClick={() => {
 
                             setIsOpen(!isOpen)
 
@@ -34,7 +34,7 @@ function CollapseList ({title, list}){
 
             </div>
 
-            <div isOpen={isOpen}>
+            <div>
 
                 <div className={isOpen ? 'DescriptionCollapse' : 'DescriptionCollapse DescriptionCollapseOpened'}>
 

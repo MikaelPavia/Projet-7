@@ -14,7 +14,7 @@ function CollapseText ({title, description}){
     
     return ( 
 
-        <div isOpen={isOpen} className={isOpen ? 'CollapseContainer': 'CollapseContainer CollapseContainerOpened'}> 
+        <div className={isOpen ? 'CollapseContainer': 'CollapseContainer CollapseContainerOpened'}> 
 
             <div className="titleDivCollapse">
 
@@ -22,7 +22,7 @@ function CollapseText ({title, description}){
 
                     <div className="titleCollapse">{title}</div>
 
-                    <div isOpen={isOpen} onClick={() => {
+                    <div onClick={() => {
 
                         setIsOpen(!isOpen)
 
@@ -32,7 +32,7 @@ function CollapseText ({title, description}){
 
             </div>
 
-            <div isOpen={isOpen} className={isOpen ? 'DescriptionCollapse' : 'DescriptionCollapse DescriptionCollapseOpened'}>
+            <div className={isOpen ? 'DescriptionCollapse' : 'DescriptionCollapse DescriptionCollapseOpened'}>
 
                 <p className="collapseText">{description}</p>
 

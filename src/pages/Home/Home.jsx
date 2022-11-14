@@ -1,33 +1,19 @@
-
-// import {useState, useEffect} from 'react';
-
 import PrintBanner from "../../components/Banner/Banner.jsx"
 import Card from "../../components/Card/Card.jsx"
 import '../Home/Home.scss'
 import BanniereImg from '../../assets/banniere.png'
 
-import RentingsList from "../../datas/LocationList.json"
+import { DatasContext } from "../../components/Provider/Provider.jsx"
+import { useContext } from "react"
+
 
 function Home() {
-  
-// console.log(RentingsList)
-//   const [rentings, setRentings] = useState([]); 
 
-//   useEffect(() => {
-
-//     fetch(RentingsList)
-
-//     .then((response) => {
-//       console.log(response.type)
-//       return response.json()
-//     })
-//     .then((data) => {
-//       console.log(data)
-//       setRentings(data)
-//     })
-//   }, []) 
+  const { rentings, isLoaded, error } = useContext(DatasContext)
 
     return (
+
+    isLoaded ? 
       
         <div className="homeContainer">
           
@@ -38,7 +24,7 @@ function Home() {
 
           <div className="cardsContainer">
 
-              {RentingsList.map((loc) => (
+              {rentings.map((loc) => (
 
                   <Card
                   key={loc.id}
@@ -52,7 +38,7 @@ function Home() {
 
           </div>
           
-        </div>
+        </div>: <div>Chargement...</div>
       
     )
 }

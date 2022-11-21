@@ -23,4 +23,9 @@ Owner.propTypes = {
 
     }
 
+Owner.defaultProps = {
+        name: '',
+        picture: ''
+        }
+        
 export default Owner

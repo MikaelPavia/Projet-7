@@ -1,12 +1,12 @@
 .titleDivCollapse {
     width: 100%;
-height: 35px;
-background-color: #EF6C6C;
-color: white;
-font-size: 21px;
-border-radius: 10px;
-display: flex;
-align-items: center;
+    height: 35px;
+    background-color: #EF6C6C;
+    color: white;
+    font-size: 18px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .titleCollapse {
@@ -15,16 +15,16 @@ align-items: center;
 
 .titleIcon {
     width: 100%;
-display:flex;
-justify-content: space-between;
-align-items: center;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .ulCollapse {
     list-style: none;
-line-height: 1.5;
-padding: 30px 15px 30px 10px;
-font-size: 21px;
+    line-height: 1.5;
+    padding: 30px 15px 30px 10px;
+    font-size: 21px;
 }
 
 .collapseText {
@@ -33,10 +33,11 @@ font-size: 21px;
 
 
 .IconCollapse{ 
-    font-size: 30px;
+    font-size: 25px;
     transform: rotate(180deg);
     margin-right: 10px;
     transition: transform 500ms;
+    cursor: pointer;
 }
 
 .IconCollapseOpened { 
@@ -45,18 +46,18 @@ font-size: 21px;
 
 
 .DescriptionCollapse {
-width: 100%;
-font-size: 21px;
-background-color: #f2f2f2;
-border-radius: 10px;
-margin-top: -25px;
-color: #EF6C6C;
-transform-origin: 50% top;
-transform: scaleY(0);
-transition: transform 300ms;
-z-index: -10;
-position: relative;
-opacity: 0.5;
+    width: 100%;
+    font-size: 21px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    margin-top: -25px;
+    color: #EF6C6C;
+    transform-origin: 50% top;
+    transform: scaleY(0);
+    transition: transform 300ms;
+    z-index: -10;
+    position: relative;
+    opacity: 0.5;
 
 }
 
@@ -64,20 +65,20 @@ opacity: 0.5;
 .DescriptionCollapseOpened {
     transform: scaleY(1);
     opacity: 1;
-    margin-top: -30px;
-    }
+    margin-top: -35px;
+}
 
 
 .CollapseContainer {
-height: 80px;
-transition: 500ms;
-width: 100%;
-    }
+    height: 80px;
+    transition: 500ms;
+    width: 100%;
+}
 
 
 .CollapseContainerOpened {
     height: auto;
-    }
+}
 
 
 
@@ -85,9 +86,14 @@ width: 100%;
 
 
 @media all and (min-width: 992px) {
+
+    .IconCollapse{ 
+        font-size: 30px;
+    }
     
     .titleDivCollapse {
-    height: 50px;
+        height: 50px;
+        font-size: 21px;
     }
     
     

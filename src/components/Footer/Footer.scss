@@ -1,25 +1,25 @@
 .footerStyle {
     display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-width: auto;
-height: 200px;
-background-color: black;
-margin-top: 100px;
-}
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: auto;
+    height: 200px;
+    background-color: black;
+    margin-top: 100px;
+    }
 
 .footerLogo {
     display: flex;
-align-items: center;
-justify-content: center;
-font-size: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
 }
 
 .footerDiv {
     color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
 }

@@ -12,9 +12,6 @@ import Error404 from '../Error/Error.jsx'
 
 import './Renting.scss'
 
-// import { useNavigate } from "react-router-dom"
-//const navigate = useNavigate();
-
 function FicheLogement() {
 
   const { id } = useParams()
@@ -47,10 +44,11 @@ function FicheLogement() {
                     <div className="city">{loc.location}</div>
 
                     <Tags
-                        loc={loc}
-                        >
+                    
+                        loc={loc}>
 
-                        </Tags>
+                    </Tags>
+                    
                 </div>
 
                 

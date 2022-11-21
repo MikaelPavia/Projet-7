@@ -10,11 +10,11 @@ const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
 function CollapseText ({title, description}){  
     
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     
     return ( 
 
-        <div className={isOpen ? 'CollapseContainer': 'CollapseContainer CollapseContainerOpened'}> 
+        <div className={isOpen ? 'CollapseContainer CollapseContainerOpened': 'CollapseContainer'}> 
 
             <div className="titleDivCollapse">
 
@@ -26,13 +26,13 @@ function CollapseText ({title, description}){
 
                         setIsOpen(!isOpen)
 
-                    }} className={ isOpen ? 'IconCollapse' : 'IconCollapse IconCollapseOpened'}>{ChevronIcon}</div>
+                    }} className={ isOpen ? 'IconCollapse IconCollapseOpened' : 'IconCollapse'}>{ChevronIcon}</div>
 
                 </div>
 
             </div>
 
-            <div className={isOpen ? 'DescriptionCollapse' : 'DescriptionCollapse DescriptionCollapseOpened'}>
+            <div className={isOpen ? 'DescriptionCollapse DescriptionCollapseOpened' : 'DescriptionCollapse'}>
 
                 <p className="collapseText">{description}</p>
 

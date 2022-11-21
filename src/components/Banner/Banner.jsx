@@ -1,4 +1,5 @@
 import '../Banner/Banner.scss'
+import PropTypes from 'prop-types'
 
 
 
@@ -12,6 +13,19 @@ function PrintBanner({banniereImg, text}) {
         </div>
 
 )
+}
+
+
+PrintBanner.propTypes = {
+    banniereImg: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    
+    }
+    
+PrintBanner.defaultProps = {
+    banniereImg: '',
+    text: ''
+
 }
 
 export default PrintBanner

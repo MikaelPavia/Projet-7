@@ -1,38 +1,38 @@
 .tags {
     height: auto;
-width: auto;
-margin-top: 15px;
-display: flex;
-flex-wrap: wrap;
-}
+    width: auto;
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    }
 
 .tag {
     height: 20px;
-width: auto;
-background-color: #EF6C6C;
-color: white;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 10px;
-padding-left: 10px;
-padding-right: 10px;
-font-size: 13px;
-margin: 4px 8px 4px 0;
+    width: auto;
+    background-color: #EF6C6C;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    margin: 4px 8px 4px 0;
 }
 
 @media all and (min-width: 992px) {
 
     .tags {
-    height: 50px;
-    width: auto;
-    margin: 8px 8px 4px -5px;
+        height: 50px;
+        width: auto;
+        margin: 8px 8px 4px -5px;
     }  
 
     .tag {
-    height: 25px;
-    margin: 4px;
-    font-size: 19px;
+        height: 25px;
+        margin: 4px;
+        font-size: 19px;
     }
 
 }

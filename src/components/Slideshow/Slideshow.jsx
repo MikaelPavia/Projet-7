@@ -1,5 +1,5 @@
-
 import { useState } from "react"
+import PropTypes from 'prop-types'
 import '../Slideshow/Slideshow.scss'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -12,7 +12,7 @@ const Slideshow = ({ slides }) => {
     const [current, setCurrent] = useState(0);
     const length = slides.length;
     
-    console.log(length)
+    
     const nextSlide = () => {
         setCurrent(current ===  length - 1 ? 0 : current + 1);
     };
@@ -25,8 +25,10 @@ const Slideshow = ({ slides }) => {
     let ChevronIconRight = ''
 
     if (length > 1) {
-    ChevronIconLeft = <FontAwesomeIcon icon={faChevronLeft} className="leftArrow" onClick={prevSlide}/>
-    ChevronIconRight = <FontAwesomeIcon icon={faChevronRight} className="rightArrow" onClick={nextSlide}/>
+
+        ChevronIconLeft = <FontAwesomeIcon icon={faChevronLeft} className="leftArrow" onClick={prevSlide}/>
+        ChevronIconRight = <FontAwesomeIcon icon={faChevronRight} className="rightArrow" onClick={nextSlide}/>
+
     }
 
         return (
@@ -39,6 +41,7 @@ const Slideshow = ({ slides }) => {
                 <div className="testcarousel">{current + 1}/{length}</div>
                 
                 {slides.map((slide, index) => {
+
                     return (
                         
                         <div key={index}>
@@ -50,15 +53,22 @@ const Slideshow = ({ slides }) => {
                             
                         </div>
                 
-                        
                     );
                 })}
                  
             </div>
         )
-    
-    
-
 }
+
+
+Slideshow.propTypes = {
+    slides: PropTypes.array.isRequired
+    
+    }
+    
+    Slideshow.defaultProps = {
+    slides: ''
+    
+    }
 
 export default Slideshow

@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 import { useState } from "react"
 import { useParams } from "react-router-dom"
+import PropTypes from 'prop-types'
 import './Collapse.scss'
 const ChevronIcon = <FontAwesomeIcon icon={faChevronUp}/>
 
 
 function CollapseList ({title, list}){  
     
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     
     const { id } = useParams()
     
@@ -28,7 +29,7 @@ function CollapseList ({title, list}){
 
                             setIsOpen(!isOpen)
 
-                        }} className={ isOpen ? 'IconCollapse' : 'IconCollapse IconCollapseOpened'}>{ChevronIcon}</div>
+                        }} className={ isOpen ? 'IconCollapse IconCollapseOpened' : 'IconCollapse'}>{ChevronIcon}</div>
 
                 </div>
 
@@ -36,7 +37,7 @@ function CollapseList ({title, list}){
 
             <div>
 
-                <div className={isOpen ? 'DescriptionCollapse' : 'DescriptionCollapse DescriptionCollapseOpened'}>
+                <div className={isOpen ? 'DescriptionCollapse DescriptionCollapseOpened' : 'DescriptionCollapse'}>
 
                     <ul className="ulCollapse">
 
@@ -58,5 +59,15 @@ function CollapseList ({title, list}){
     )
 
 }
+
+CollapseList.propTypes = {
+    title: PropTypes.string.isRequired,
+    list: PropTypes.array.isRequired
+    }
+    
+CollapseList.defaultProps = {
+    title: '',
+    list: ''
+    }
 
 export default CollapseList

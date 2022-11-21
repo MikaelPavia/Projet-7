@@ -1,4 +1,3 @@
-// import styled from "styled-components"
 import Logo from '../../assets/FooterLogo.png'
 import '../Footer/Footer.scss'
 

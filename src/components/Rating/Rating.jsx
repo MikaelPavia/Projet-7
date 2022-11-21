@@ -1,8 +1,10 @@
 import '../Rating/Rating.scss'
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import Colors from "../../utils/style/style"
+import PropTypes from 'prop-types'
+
+
 
 function Rating ( {locId, rating} ) {
 
@@ -30,4 +32,17 @@ function Rating ( {locId, rating} ) {
     )
 }
 
+
+Rating.propTypes = {
+  locId: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired
+  
+  }
+  
+  Rating.defaultProps = {
+  locId: '',
+  rating: '',
+  
+  }
+  
 export default Rating

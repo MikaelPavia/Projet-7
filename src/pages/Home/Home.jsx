@@ -2,7 +2,7 @@ import PrintBanner from "../../components/Banner/Banner.jsx"
 import Card from "../../components/Card/Card.jsx"
 import '../Home/Home.scss'
 import BanniereImg from '../../assets/banniere.png'
-
+import Loader from "../../components/Loader/Loader.jsx"
 import { DatasContext } from "../../components/Provider/Provider.jsx"
 import { useContext } from "react"
 
@@ -13,32 +13,36 @@ function Home() {
 
     return (
 
-    isLoaded ? 
+      isLoaded ? 
+
+        error ? 
       
-        <div className="homeContainer">
-          
-           <PrintBanner
-           banniereImg={BanniereImg}
-           text='Chez vous, partout et ailleurs'>
-           </PrintBanner>
+          <div>{error}Erreur</div>:
 
-          <div className="cardsContainer">
+            <div className="homeContainer">
+            
+              <PrintBanner
+              banniereImg={BanniereImg}
+              text='Chez vous, partout et ailleurs'>
+              </PrintBanner>
 
-              {rentings.map((loc) => (
+              <div className="cardsContainer">
 
-                  <Card
-                  key={loc.id}
-                  LocArray={loc} 
-                  id={loc.id}
-                  picture={loc.cover}
-                  title={loc.title}>
-                  </Card>
+                {rentings.map((loc) => (
 
-            ))}
+                    <Card
+                    key={loc.id}
+                    LocArray={loc} 
+                    id={loc.id}
+                    picture={loc.cover}
+                    title={loc.title}>
+                    </Card>
 
-          </div>
-          
-        </div>: <div>Chargement...</div>
+                ))}
+
+              </div>
+            
+          </div>: <Loader></Loader>
       
     )
 }

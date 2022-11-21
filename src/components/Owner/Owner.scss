@@ -1,8 +1,8 @@
 .divOwner {
     display: flex;
-justify-content: space-between;
-width: 100px;
-align-items: center;
+    justify-content: space-between;
+    width: 100px;
+    align-items: center;
 }
 
 .name {
@@ -11,23 +11,23 @@ align-items: center;
     text-align: right;
     // color: ${Colors.primary};
     color:#EF6C6C;
-    font-size: 20px;
+    font-size: 17px;
     margin-right: 10px;
 }
 
 .profilePicture {
     height: 50px;
-width: 50px;
-border-radius: 25px;
+    width: 50px;
+    border-radius: 25px;
 }
 
 @media all and (min-width: 992px) {
 
     .divOwner {
         display: flex;
-    justify-content: space-between;
-    width: 180px;
-    align-items: center;
+        justify-content: space-between;
+        width: 180px;
+        align-items: center;
     }
     
     .name {
@@ -42,8 +42,8 @@ border-radius: 25px;
     
     .profilePicture {
         height: 80px;
-    width: 80px;
-    border-radius: 40px;
+        width: 80px;
+        border-radius: 40px;
     }
 
 }

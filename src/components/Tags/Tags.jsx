@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import '../Tags/Tags.scss'
 
 function Tags ( {loc} ) {
@@ -15,6 +16,17 @@ function Tags ( {loc} ) {
             </div>
     )
     
+}
+
+
+Tags.propTypes = {
+    loc: PropTypes.object.isRequired
+    
+}
+    
+Tags.defaultProps = {
+    loc: ''
+
 }
 
 export default Tags

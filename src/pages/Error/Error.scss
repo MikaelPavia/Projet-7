@@ -10,21 +10,21 @@
 
 .errorCode {
     font-size: 140px;
-color: #EF6C6C;
-font-weight: bold;
+    color: #EF6C6C;
+    font-weight: bold;
 }
 
 .errorSentence {
     color: #EF6C6C;
-font-size: 25px;
-margin-top: 50px;
-text-align: center;
+    font-size: 25px;
+    margin-top: 50px;
+    text-align: center;
 }
 
 .homeLink {
     color: #EF6C6C;
-font-size: 20px;
-margin-top: 110px;
+    font-size: 20px;
+    margin-top: 110px;
 }
 
 @media all and (min-width: 992px) {
@@ -38,11 +38,11 @@ margin-top: 110px;
     }
     
     .errorSentence {
-    font-size: 2rem;
+        font-size: 2rem;
     }
     
     .homeLink {
-    font-size: 1.5rem;
+        font-size: 1.5rem;
     }
 
 }

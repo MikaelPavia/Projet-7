@@ -1,41 +1,41 @@
 .bannerLocation {
-height: 415px;
-width: 90%;
-border-radius: 10px;
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 60px;
+    height: 415px;
+    width: 90%;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
 }
 
 .sectionInfos {
-display: flex;
-justify-content: space-between;
-flex-direction: column;
-width: 90%;
-margin-left: auto;
-margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .sectionCollapses {
-display: block;
-margin-left: auto;
-margin-right: auto;
-margin-top: 25px;
-width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+    width: 90%;
 }
 
 .divCollapses {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .divContainerTitleCityTags{
-display: flex;
-flex-direction: column;
-width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .divContainerOwnerRatings{
@@ -43,27 +43,25 @@ width: 100%;
     flex-direction: row-reverse;
     justify-content: space-between;
     width: 95%;
-    }
+}
 
 
 
 .title {
     height: auto;
-width: 100%;
-margin-top: 15px;
-text-align: left;
-// color: ${Colors.primary};
-color: #EF6C6C;
-font-size: 30px;
+    width: 100%;
+    margin-top: 15px;
+    text-align: left;
+    color: #EF6C6C;
+    font-size: 20px;
 }
 
 .city {
     height: 20px;
-width: auto;
-text-align: left;
-// color: ${Colors.primary};
-font-size: 18px;
-color: #EF6C6C;
+    width: auto;
+    text-align: left;
+    font-size: 18px;
+    color: #EF6C6C;
 }
 
 .containerCollapse {
@@ -74,63 +72,60 @@ color: #EF6C6C;
 @media all and (min-width: 992px) {
 
     .title {
-    height: 54px;
-    width: auto;
-    margin-top: 15px;
-    text-align: left;
-    color: #EF6C6C;
-    font-size: 40px;
+        height: 54px;
+        width: auto;
+        margin-top: 15px;
+        text-align: left;
+        color: #EF6C6C;
+        font-size: 35px;
     }
 
 
     .city {
         height: 20px;
-    width: auto;
-    text-align: left;
-    // color: ${Colors.primary};
-    font-size: 20px;
-    color: #EF6C6C;
+        width: auto;
+        text-align: left;
+        font-size: 20px;
+        color: #EF6C6C;
     }
+
     .divContainerTitleCityTags{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        width: 70%;
-        }
+        width: 100%;
+    }
 
+    .divContainerOwnerRatings{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 40%;
+        height: 170px;
+    }
 
+    .sectionCollapses {
+        width: 90%;
+    }
 
+    .divCollapses {
+        flex-direction: row;
+    }
 
-        .divContainerOwnerRatings{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: flex-end;
-            width: 40%;
-            height: 170px;
-            
-            }
-            .sectionCollapses {
-                width: 90%;
-                }
+    .containerCollapse {
+        width: 45%;
+    }
 
-            .divCollapses {
-                flex-direction: row;
-                }
-
-                .containerCollapse {
-                    width: 45%;
-                }
-
-                .sectionInfos {
-                    display: flex;
-                    justify-content: space-between;
-                    flex-direction: row;
-                    margin-top: 25px;
-                    width: 90%;
-                    margin-left: auto;
-                    margin-right: auto;
-                    }
+    .sectionInfos {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 25px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
                 
 }
 

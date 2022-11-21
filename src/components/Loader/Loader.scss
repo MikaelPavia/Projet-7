@@ -1,0 +1,42 @@
+.divLoader {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+
+.loader {
+    border: 9px solid;
+    height: 90px;
+    width: 90px;
+    border-radius: 45px;
+    position: absolute;
+
+}
+
+.loader--1 {
+    border-color: rgb(246, 246, 246);
+    
+}
+
+.loader--2 {
+    border-top-color: #EF6C6C;
+    border-bottom-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(255, 255, 255, 0);
+    border-right-color: rgba(255, 255, 255, 0);
+    animation: loader 1300ms ease-in-out infinite;
+
+}
+
+
+@keyframes loader {
+    from {
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

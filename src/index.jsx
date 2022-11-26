@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, 
+import { HashRouter, 
          Routes, 
          Route
        } from 'react-router-dom'
@@ -21,7 +21,7 @@ root.render(
 
   <React.StrictMode>
 
-    <BrowserRouter>
+    <HashRouter>
 
       <Header />
  
@@ -39,7 +39,7 @@ root.render(
 
       <Footer />
 
-    </BrowserRouter>
+    </HashRouter>
 
   </React.StrictMode>
 );

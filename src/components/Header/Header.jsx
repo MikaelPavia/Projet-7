@@ -17,8 +17,6 @@ function Header() {
                     <Link to='/' className='navLinks'>Accueil</Link>
 
                     <Link to='../about' className='navLinks'>À propos</Link>
-
-                    
                     
                     </nav>
 

@@ -31,33 +31,34 @@ const Slideshow = ({ slides }) => {
 
     }
 
-        return (
+    return (
+        
+        <div className="sliderStyle">
             
-            <div className="sliderStyle">
-                
-                {ChevronIconLeft}
-                {ChevronIconRight}
-               
-                <div className="testcarousel">{current + 1}/{length}</div>
-                
-                {slides.map((slide, index) => {
+            {ChevronIconLeft}
+            {ChevronIconRight}
+            
+            <div className="slidesCount">{current + 1}/{length}</div>
+            
+            {slides.map((slide, index) => {
 
-                    return (
+                return (
+                    
+                    <div key={index}>
                         
-                        <div key={index}>
+                        {index === current && (
                             
-                            {index === current && (
-                                <img src={slide} alt='Une pièce du logement' className="slideImg"/>
-                                
-                            )}
+                            <img src={slide} alt='Une pièce du logement' className="slideImg"/>
                             
-                        </div>
+                        )}
+                        
+                    </div>
+            
+                );
+            })}
                 
-                    );
-                })}
-                 
-            </div>
-        )
+        </div>
+    )
 }
 
 

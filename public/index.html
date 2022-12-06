@@ -1,6 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script defer data-domain="digitalinclusive.fr" src="https://plausible.io/js/script.js"></script>
+
+     <!-- Google tag (gtag.js) -->
+     <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5SYBBF8B4M"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+     
+       gtag('config', 'G-5SYBBF8B4M'); -->
+     </script>
+
+   <!-- Google Tag Manager -->
+<!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T3B2ZND');</script> -->
+<!-- End Google Tag Manager -->
+
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,6 +48,9 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>Kasa - Agence de location</title>
+
+
+    
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -41,8 +65,31 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-    
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js">
+    </script>
 
+    <script type="text/javascript">
+
+        (function () {
+          emailjs.init('_OMLUU_MqUDO0iSZy');
+        })();
+
+    </script>
+<script>
+  window.axeptioSettings = {
+    clientId: "638e0e6a5022badae31cb67b",
+    cookiesVersion: "digitalinclusive-fr-2",
+  };
+   
+  (function(d, s) {
+    var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+    e.async = true; e.src = "//static.axept.io/sdk.js";
+    t.parentNode.insertBefore(e, t);
+  })(document, "script");
+  </script>
+  
   </body>
 
 </html>

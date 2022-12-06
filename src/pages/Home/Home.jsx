@@ -12,7 +12,7 @@ function Home() {
   const { rentings, isLoaded, error } = useContext(DatasContext)
 
     return (
-
+      
       isLoaded ? 
 
         error ? 

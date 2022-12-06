@@ -1,7 +1,7 @@
 import CollapseText from "../../components/Collapses/CollapseText"
 import '../About/About.scss'
 import bannerImgAbout  from "../../assets/banniereAbout.png"
-
+import Reviews from "../../components/Reviews/Reviews"
 function About() {
 
     return (
@@ -27,7 +27,7 @@ function About() {
                 <CollapseText title='Sécurité' description={'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à l\'hôte qu\'au locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.'}></CollapseText>
                 
             </div>
-        
+                <Reviews></Reviews>
         </div>
     
     )

@@ -40,7 +40,7 @@ function CollapseText ({title, description}){
 
         </div>
 
-)
+    )
 
 }
 

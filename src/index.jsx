@@ -9,7 +9,6 @@ import Home from './pages/Home/Home.jsx';
 import Renting from './pages/Renting/Renting.jsx';
 import About from './pages/About/About.jsx';
 import Error from './pages/Error/Error.jsx';
-import Contact from './pages/Contact/Contact.jsx';
 import Header from './components/Header/Header.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import '../src/style.scss';
@@ -33,8 +32,6 @@ root.render(
           <Route path='/Location/:id' element={<Renting />}/>
             
           <Route path='/about' element={<About />}/>
-
-          <Route path='/contact' element={<Contact />}/>
             
           <Route path='*' element={<Error />}/>
             
